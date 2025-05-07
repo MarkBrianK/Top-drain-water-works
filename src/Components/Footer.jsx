@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="container text-center text-md-start">
         <div className="row g-4">
           <div className="col-md-4">
-            <h5 className="fw-bold">TopDrain Water Works LTD</h5>
+            <h5 className="fw-bold">TopDrain Waterworks LTD</h5>
             <p><FaMapMarkerAlt className="me-2" /> Nairobi, Kenya</p>
             <p><FaPhoneAlt className="me-2" /> +254 719 435 030</p>
             <p><FaEnvelope className="me-2" /> info@topdrain.co.ke</p>
@@ -50,7 +50,7 @@ export default function Footer() {
 
         <hr className="my-4 border-light" />
         <p className="text-center mb-0">
-          © {new Date().getFullYear()} TopDrain Water Works LTD. All rights reserved.
+          © {new Date().getFullYear()} TopDrain WaterWorks LTD. All rights reserved.
         </p>
       </div>
     </footer>

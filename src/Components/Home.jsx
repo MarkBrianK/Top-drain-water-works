@@ -12,7 +12,6 @@ const cld = new Cloudinary({ cloud: { cloudName: "deqzkva98" } });
 export default function Home() {
   return (
     <main className="container py-5">
-      {/* Video Carousel */}
       <section className="mb-5">
         <div className="text-center mb-4">
           <h1 className="fw-bold">

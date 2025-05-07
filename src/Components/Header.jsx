@@ -13,7 +13,7 @@ export default function Header() {
                         height="120"
                         className="d-inline-block align-top me-2"
                     />
-                    <span className="fw-bold">TopDrain Water Works</span>
+                    <span className="fw-bold">TopDrain Waterworks LTD</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
