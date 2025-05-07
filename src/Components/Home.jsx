@@ -22,7 +22,7 @@ export default function Home() {
             }}>
               Precision
             </span>{" "}
-            <span style={{ fontSize: "1.5rem" }}>at work</span>
+            <span style={{ fontSize: "1.2rem" }}>at work</span>
           </h1>
 
 
@@ -93,7 +93,7 @@ export default function Home() {
             }}>
               Our Core
             </span>{" "}
-            <span style={{ fontSize: "1.5rem" }}>Services</span>
+            <span style={{ fontSize: "1.2rem" }}>Services</span>
           </h1>
 
 
