@@ -1,0 +1,32 @@
+[
+    {
+      "title": "Flood Control",
+      "image": "flood-control.jpg",
+      "desc": "Professional flood mitigation systems to safeguard your infrastructure."
+    },
+    {
+      "title": "Plumbing Works",
+      "image": "plumbing.jpg",
+      "desc": "Certified plumbing solutions for homes and commercial spaces."
+    },
+    {
+      "title": "Sewer Management",
+      "image": "sewer.jpg",
+      "desc": "Efficient sewer handling with modern waste management practices."
+    },
+    {
+      "title": "Water Supply",
+      "image": "water-supply.jpg",
+      "desc": "Reliable water sourcing, treatment, and distribution services."
+    },
+    {
+      "title": "Drainage Works",
+      "image": "drainage.jpg",
+      "desc": "Custom drainage system planning, installation, and maintenance."
+    },
+    {
+      "title": "Maintenance & Repair",
+      "image": "repair.jpg",
+      "desc": "Timely repair and routine service to ensure system longevity."
+    }
+  ]
