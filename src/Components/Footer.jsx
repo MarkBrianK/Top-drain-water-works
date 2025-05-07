@@ -18,7 +18,8 @@ export default function Footer() {
           <div className="col-md-4">
             <h5 className="fw-bold">TopDrain Waterworks LTD</h5>
             <p><FaMapMarkerAlt className="me-2" /> Nairobi, Kenya</p>
-            <p><FaPhoneAlt className="me-2" /> +254 719 435 030</p>
+            <p><FaPhoneAlt className="me-2" /> +254 702 263 360</p>
+            <p><FaPhoneAlt className="me-2" /> +254 758 519 850</p>
             <p><FaEnvelope className="me-2" /> info@topdrain.co.ke</p>
           </div>
 
