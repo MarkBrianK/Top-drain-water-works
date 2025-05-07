@@ -7,7 +7,7 @@ import { scale } from "@cloudinary/url-gen/actions/resize";
 import { auto } from "@cloudinary/url-gen/qualifiers/format";
 import { auto as qualityAuto } from "@cloudinary/url-gen/qualifiers/quality";
 
-const cld = new Cloudinary({ cloud: { cloudName: 'your-cloud-name' } });
+const cld = new Cloudinary({ cloud: { cloudName: 'deqzkva98' } });
 
 export default function Home() {
   return (
