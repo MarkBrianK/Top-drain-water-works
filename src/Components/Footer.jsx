@@ -20,7 +20,7 @@ export default function Footer() {
             <p><FaMapMarkerAlt className="me-2" /> Nairobi, Kenya</p>
             <p><FaPhoneAlt className="me-2" /> +254 702 263 360</p>
             <p><FaPhoneAlt className="me-2" /> +254 758 519 850</p>
-            <p><FaEnvelope className="me-2" /> info@topdrain.co.ke</p>
+            <p><FaEnvelope className="me-2" /> info@topdrain.com</p>
           </div>
 
           <div className="col-md-4">
