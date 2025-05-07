@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaTiktok, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -16,19 +16,10 @@ export default function Footer() {
       <div className="container text-center text-md-start">
         <div className="row g-4">
           <div className="col-md-4">
-            <h5 className="fw-bold">Top Drain Water Works LTD</h5>
-            <p>
-              <FaMapMarkerAlt className="me-2" />
-              Nairobi, Kenya
-            </p>
-            <p>
-              <FaPhoneAlt className="me-2" />
-              +254 719 435 030
-            </p>
-            <p>
-              <FaEnvelope className="me-2" />
-              info@topdrain.co.ke
-            </p>
+            <h5 className="fw-bold">TopDrain Water Works LTD</h5>
+            <p><FaMapMarkerAlt className="me-2" /> Nairobi, Kenya</p>
+            <p><FaPhoneAlt className="me-2" /> +254 719 435 030</p>
+            <p><FaEnvelope className="me-2" /> info@topdrain.co.ke</p>
           </div>
 
           <div className="col-md-4">
@@ -44,9 +35,15 @@ export default function Footer() {
           <div className="col-md-4">
             <h6 className="fw-bold">Connect with Us</h6>
             <div className="d-flex gap-3 justify-content-center justify-content-md-start">
-              <a href="https://facebook.com" className="text-white fs-5"><FaFacebookF /></a>
-              <a href="https://twitter.com/_topdrain" className="text-white fs-5"><FaTwitter /></a>
-              <a href="https://instagram.com" className="text-white fs-5"><FaInstagram /></a>
+              <a href="https://twitter.com/_topdrain" className="text-white fs-5" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
+                <FaTwitter />
+              </a>
+              <a href="https://instagram.com/topdrainwaterworks" className="text-white fs-5" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <FaInstagram />
+              </a>
+              <a href="https://tiktok.com/@topdrain_waterwork" className="text-white fs-5" target="_blank" rel="noopener noreferrer" title="TikTok">
+                <FaTiktok />
+              </a>
             </div>
           </div>
         </div>
