@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
             <p>
               <FaPhoneAlt className="me-2" />
-              +254 712 345 678
+              +254 719 435 030
             </p>
             <p>
               <FaEnvelope className="me-2" />
