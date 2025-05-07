@@ -16,8 +16,6 @@ export default function Header() {
                     <span className="fw-bold">TopDrain Water Works</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
-                {/* Nav Items */}
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         {[
