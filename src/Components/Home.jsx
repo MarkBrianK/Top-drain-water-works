@@ -14,16 +14,6 @@ export default function Home() {
     <main className="container py-5">
       <section className="mb-5">
         <div className="text-center mb-4">
-          <h1 className="fw-bold">
-            <span style={{
-              display: "inline-block",
-              backgroundColor: "#d0e7ff",
-              padding: "0 5px"
-            }}>
-              Precision
-            </span>{" "}
-            <span style={{ fontSize: "1.2rem" }}>at work</span>
-          </h1>
 
 
         </div>
