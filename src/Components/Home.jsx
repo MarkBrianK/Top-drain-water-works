@@ -23,7 +23,7 @@ export default function Home() {
             }}>
               Precision
             </span>{" "}
-            <span style={{ fontSize: "1.5rem" }}>at Work</span>
+            <span style={{ fontSize: "1.5rem" }}>at work</span>
           </h1>
 
 
