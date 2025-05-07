@@ -1,32 +1,32 @@
 [
     {
       "title": "Flood Control",
-      "image": "flood-control.jpg",
+      "publicId": "flood-control_egxlky",
       "desc": "Professional flood mitigation systems to safeguard your infrastructure."
     },
     {
       "title": "Plumbing Works",
-      "image": "plumbing.jpg",
+      "publicId": "pumbing_easfcz",
       "desc": "Certified plumbing solutions for homes and commercial spaces."
     },
     {
       "title": "Sewer Management",
-      "image": "sewer.jpg",
+      "publicId": "sewer_yehuyt",
       "desc": "Efficient sewer handling with modern waste management practices."
     },
     {
       "title": "Water Supply",
-      "image": "water-supply.jpg",
+      "publicId": "water-supply_ptotqj",
       "desc": "Reliable water sourcing, treatment, and distribution services."
     },
     {
       "title": "Drainage Works",
-      "image": "drainage.jpg",
+      "publicId": "drainage_ldnhi5",
       "desc": "Custom drainage system planning, installation, and maintenance."
     },
     {
       "title": "Maintenance & Repair",
-      "image": "repair.jpg",
+      "publicId": "repair_txpsip",
       "desc": "Timely repair and routine service to ensure system longevity."
     }
   ]
