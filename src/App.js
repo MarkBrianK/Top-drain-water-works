@@ -1,28 +1,53 @@
-import React, { useEffect, useState } from 'react';
-import Home from './Components/Home';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import LoadingSpinner from './Resources/LoadingSpinner';
 
-function App() {
+import Home from './Components/Home';
+import About from './Components/About';
+import Contact from './Components/ContactUs';
+import Careers from './Components/Careers';
+import Feedback from './Components/Feedback';
+import InfoCentre from './Components/InformationCentre';
+import Projects from './Components/Projects';
+
+export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
+    const handleLoad = () => setLoading(false);
+
+    if (document.readyState === 'complete') {
+
+      handleLoad();
+    } else {
+      
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
   }, []);
 
   return (
     <div className="App">
-      {loading ? <LoadingSpinner /> : (
-        <>
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <Router>
           <Header />
-          <Home />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/info" element={<InfoCentre />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
           <Footer />
-        </>
+        </Router>
       )}
     </div>
   );
 }
-
-export default App;
