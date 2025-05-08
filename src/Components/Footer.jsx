@@ -1,5 +1,16 @@
 import React from "react";
-import { FaTwitter, FaInstagram, FaTiktok, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaInstagram,
+  FaTiktok,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaTools,
+  FaProjectDiagram,
+  FaEnvelopeOpenText,
+  FaInfoCircle
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -26,10 +37,26 @@ export default function Footer() {
           <div className="col-md-4">
             <h6 className="fw-bold">Quick Links</h6>
             <ul className="list-unstyled">
-              <li><a href="#services" className="text-white text-decoration-none">Our Services</a></li>
-              <li><a href="#projects" className="text-white text-decoration-none">Projects</a></li>
-              <li><a href="#contact" className="text-white text-decoration-none">Contact</a></li>
-              <li><a href="#about" className="text-white text-decoration-none">About Us</a></li>
+              <li>
+                <a href="#services" className="text-white text-decoration-none">
+                  <FaTools className="me-2" /> Our Services
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="text-white text-decoration-none">
+                  <FaProjectDiagram className="me-2" /> Projects
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-white text-decoration-none">
+                  <FaEnvelopeOpenText className="me-2" /> Contact
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-white text-decoration-none">
+                  <FaInfoCircle className="me-2" /> About Us
+                </a>
+              </li>
             </ul>
           </div>
 
