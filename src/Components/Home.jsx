@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import servicesData from "../Data/services.json";
 import videosData from "../Data/videos.json";
 import { Cloudinary } from "@cloudinary/url-gen";
@@ -12,12 +13,14 @@ const cld = new Cloudinary({ cloud: { cloudName: "deqzkva98" } });
 export default function Home() {
   return (
     <main className="container py-5">
+      <Helmet>
+        <title>TopDrain Water Works LTD | Home</title>
+        <meta name="description" content="TopDrain Water Works LTD is a leading water and civil engineering company offering sustainable solutions in Kenya and beyond." />
+      </Helmet>
+
+      {/* Video Carousel */}
       <section className="mb-5">
-        <div className="text-center mb-4">
-
-
-        </div>
-
+        <div className="text-center mb-4"></div>
 
         <div id="videoCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner rounded-4 overflow-hidden">
@@ -76,17 +79,17 @@ export default function Home() {
       <section>
         <div className="text-center mb-5">
           <h1 className="fw-bold">
-            <span style={{
-              display: "inline-block",
-              backgroundColor: "#d0e7ff",
-              padding: "0 5px"
-            }}>
+            <span
+              style={{
+                display: "inline-block",
+                backgroundColor: "#d0e7ff",
+                padding: "0 5px"
+              }}
+            >
               Our Core
             </span>{" "}
             <span style={{ fontSize: "1.2rem" }}>Services</span>
           </h1>
-
-
         </div>
 
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
