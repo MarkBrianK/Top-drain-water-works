@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Analytics } from '@vercel/analytics/react';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
