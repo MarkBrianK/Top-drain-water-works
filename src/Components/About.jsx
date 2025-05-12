@@ -64,32 +64,53 @@ export default function About() {
           <div className="col-md-6 mb-4">
             <img
               src={founder1}
-              alt="Founder 1"
-              className="img-fluid rounded-circle mb-3"
-              style={{ width: "150px", height: "150px", objectFit: "cover" }}
+              alt="Muriithi Mwangi"
+              style={{
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+                objectFit: "contain",
+                objectPosition: "center",
+                backgroundColor: "#fff",
+                padding: "5px",
+                border: "2px solid #ddd"
+              }}
             />
+
             <h5 className="fw-bold">Muriithi Mwangi</h5>
-            <p className="text-muted">Director of Techincal Operations & Strategic Development.</p>
+            <p className="text-muted">Director of Technical Operations & Strategic Development</p>
             <p>
-              Eng. John brings over 15 years of experience in water and civil engineering,
-              providing strategic leadership and innovation to every project.
+              Muriithi has over 8 years of hands-on experience in water works and infrastructure development.
+              As Director of Technical Operations & Strategic Development, he leads project planning,
+              oversees execution, and ensures the adoption of cutting-edge water solutions across all initiatives.
             </p>
           </div>
 
           <div className="col-md-6 mb-4">
             <img
               src={founder2}
-              alt="Founder 2"
-              className="img-fluid rounded-circle mb-3"
-              style={{ width: "150px", height: "150px", objectFit: "cover" }}
+              alt="Maina Ndegwa"
+              style={{
+                width: "150px",
+                height: "150px",
+                borderRadius: "50%",
+                objectFit: "contain",
+                objectPosition: "center",
+                backgroundColor: "#fff",
+                padding: "5px",
+                border: "2px solid #ddd"
+              }}
             />
-            <h5 className="fw-bold"> Maina Ndegwa</h5>
-            <p className="text-muted">Co-Founder & Technical Director</p>
+
+            <h5 className="fw-bold">Maina Ndegwa</h5>
+            <p className="text-muted">Business Development Director - Water Infrastructure</p>
             <p>
-              With a passion for sustainable design and technical excellence, Eng. Mary
-              oversees project execution and quality assurance across all departments.
+              Maina Ndegwa is a seasoned expert in water infrastructure with a strong focus on business development and stakeholder engagement.
+              As Business Development Director – Water Infrastructure, he drives strategic partnerships, identifies growth opportunities,
+              and champions client-centered solutions that align with TopDrain's mission of delivering sustainable water systems across the region.
             </p>
           </div>
+
         </div>
       </section>
     </div>
