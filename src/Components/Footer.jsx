@@ -11,6 +11,7 @@ import {
   FaEnvelopeOpenText,
   FaInfoCircle
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -38,24 +39,29 @@ export default function Footer() {
             <h6 className="fw-bold">Quick Links</h6>
             <ul className="list-unstyled">
               <li>
-                <a href="#services" className="text-white text-decoration-none">
-                  <FaTools className="me-2" /> Our Services
-                </a>
+                <Link to ="/careers">
+                  <FaTools className="me-2" /> Careers
+                </Link>
               </li>
               <li>
-                <a href="#projects" className="text-white text-decoration-none">
+                <Link to ="/projects">
                   <FaProjectDiagram className="me-2" /> Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-white text-decoration-none">
+                <Link to ="/contact">
                   <FaEnvelopeOpenText className="me-2" /> Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-white text-decoration-none">
+                <Link to ="/about">
                   <FaInfoCircle className="me-2" /> About Us
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to ="/info">
+                  <FaInfoCircle className="me-2" /> Information Centre
+                </Link>
               </li>
             </ul>
           </div>
