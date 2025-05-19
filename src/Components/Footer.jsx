@@ -37,29 +37,29 @@ export default function Footer() {
 
           <div className="col-md-4">
             <h6 className="fw-bold">Quick Links</h6>
-            <ul className="list-unstyled" style={{ color:"white", textDecoration:"none"}}>
+            <ul className="list-unstyled">
               <li>
-                <Link to ="/careers">
+                <Link to ="/careers"  style={{ color:"white", textDecoration:"none"}}>
                   <FaTools className="me-2" /> Careers
                 </Link>
               </li>
               <li>
-                <Link to ="/projects">
+                <Link to ="/projects"  style={{ color:"white", textDecoration:"none"}}>
                   <FaProjectDiagram className="me-2" /> Projects
                 </Link>
               </li>
               <li>
-                <Link to ="/contact">
+                <Link to ="/contact"  style={{ color:"white", textDecoration:"none"}}>
                   <FaEnvelopeOpenText className="me-2" /> Contact
                 </Link>
               </li>
               <li>
-                <Link to ="/about">
+                <Link to ="/about"  style={{ color:"white", textDecoration:"none"}}>
                   <FaInfoCircle className="me-2" /> About Us
                 </Link>
               </li>
               <li>
-                <Link to ="/info">
+                <Link to ="/info"  style={{ color:"white", textDecoration:"none"}}>
                   <FaInfoCircle className="me-2" /> Information Centre
                 </Link>
               </li>
