@@ -66,7 +66,7 @@ export default function Footer() {
               <a href="https://twitter.com/_topdrain" className="text-white fs-5" target="_blank" rel="noopener noreferrer" title="X (Twitter)">
                 <FaTwitter />
               </a>
-              <a href="https://instagram.com/topdrainwaterworks" className="text-white fs-5" target="_blank" rel="noopener noreferrer" title="Instagram">
+              <a href="https://www.instagram.com/topdrain_waterworks_ltd" className="text-white fs-5" target="_blank" rel="noopener noreferrer" title="Instagram">
                 <FaInstagram />
               </a>
               <a href="https://tiktok.com/@topdrain_waterwork" className="text-white fs-5" target="_blank" rel="noopener noreferrer" title="TikTok">
