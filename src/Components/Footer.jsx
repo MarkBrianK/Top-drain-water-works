@@ -9,7 +9,8 @@ import {
   FaTools,
   FaProjectDiagram,
   FaEnvelopeOpenText,
-  FaInfoCircle
+  FaInfoCircle,
+  FaBookOpen 
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -39,28 +40,28 @@ export default function Footer() {
             <h6 className="fw-bold">Quick Links</h6>
             <ul className="list-unstyled">
               <li>
-                <Link to ="/careers"  style={{ color:"white", textDecoration:"none"}}>
+                <Link to="/careers" className="footer-link">
                   <FaTools className="me-2" /> Careers
                 </Link>
               </li>
               <li>
-                <Link to ="/projects"  style={{ color:"white", textDecoration:"none"}}>
+                <Link to="/projects" className="footer-link">
                   <FaProjectDiagram className="me-2" /> Projects
                 </Link>
               </li>
               <li>
-                <Link to ="/contact"  style={{ color:"white", textDecoration:"none"}}>
+                <Link to="/contact" className="footer-link">
                   <FaEnvelopeOpenText className="me-2" /> Contact
                 </Link>
               </li>
               <li>
-                <Link to ="/about"  style={{ color:"white", textDecoration:"none"}}>
+                <Link to="/about" className="footer-link">
                   <FaInfoCircle className="me-2" /> About Us
                 </Link>
               </li>
               <li>
-                <Link to ="/info"  style={{ color:"white", textDecoration:"none"}}>
-                  <FaInfoCircle className="me-2" /> Information Centre
+                <Link to="/info" className="footer-link">
+                  <FaBookOpen className="me-2" /> Information Centre
                 </Link>
               </li>
             </ul>
@@ -87,6 +88,20 @@ export default function Footer() {
           © {new Date().getFullYear()} TopDrain WaterWorks LTD. All rights reserved.
         </p>
       </div>
+
+      {/* Reusable footer link style */}
+      <style>
+        {`
+          .footer-link {
+            color: white;
+            text-decoration: none;
+          }
+
+          .footer-link:hover {
+            text-decoration: underline;
+          }
+        `}
+      </style>
     </footer>
   );
 }
