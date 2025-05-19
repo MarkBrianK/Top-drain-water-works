@@ -37,7 +37,7 @@ export default function Footer() {
 
           <div className="col-md-4">
             <h6 className="fw-bold">Quick Links</h6>
-            <ul className="list-unstyled">
+            <ul className="list-unstyled" style={{ color:"white", textDecoration:"none"}}>
               <li>
                 <Link to ="/careers">
                   <FaTools className="me-2" /> Careers
