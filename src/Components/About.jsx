@@ -69,7 +69,7 @@ export default function About() {
                 width: "150px",
                 height: "150px",
                 borderRadius: "50%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center",
                 backgroundColor: "#fff",
                 padding: "5px",
