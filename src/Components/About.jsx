@@ -101,7 +101,6 @@ export default function About() {
                 border: "2px solid #ddd"
               }}
             />
-
             <h5 className="fw-bold">Maina Ndegwa</h5>
             <p className="text-muted">Business Development Director - Water Infrastructure</p>
             <p>
