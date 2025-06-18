@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import servicesData from "../Data/services.json";
-import videosData from "../Data/videos.json";
+import carouselImages from "../Data/carouselImages.json";
 import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedImage, AdvancedVideo } from "@cloudinary/react";
+import { AdvancedImage } from "@cloudinary/react";
 import { scale } from "@cloudinary/url-gen/actions/resize";
 import { auto } from "@cloudinary/url-gen/qualifiers/format";
 import { auto as qualityAuto } from "@cloudinary/url-gen/qualifiers/quality";
@@ -18,14 +18,11 @@ export default function Home() {
         <meta name="description" content="TopDrain Water Works LTD is a leading water and civil engineering company offering sustainable solutions in Kenya and beyond." />
       </Helmet>
 
-      {/* Video Carousel */}
       <section className="mb-5">
-        <div className="text-center mb-4"></div>
-
-        <div id="videoCarousel" className="carousel slide" data-bs-ride="carousel">
+        <div id="imageCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner rounded-4 overflow-hidden">
-            {videosData.map((video, index) => {
-              const cldVideo = cld.video(video.publicId).format(auto()).quality(qualityAuto());
+            {carouselImages.map((image, index) => {
+              const cldImage = cld.image(image.publicId).format(auto()).quality(qualityAuto());
 
               return (
                 <div
@@ -34,21 +31,17 @@ export default function Home() {
                   style={{ height: "500px" }}
                 >
                   <div className="position-relative h-100">
-                    <AdvancedVideo
-                      cldVid={cldVideo}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
+                    <AdvancedImage
+                      cldImg={cldImage}
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "cover"
-                      }}
-                    />
+                        objectFit: "contain",
+                        background: "linear-gradient(to bottom,rgb(245, 245, 245), #266dd7)"
+                      }} />
                     <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
-                      <h5>{video.title}</h5>
-                      <p>{video.description}</p>
+                      <h5>{image.title}</h5>
+                      <p>{image.description}</p>
                     </div>
                   </div>
                 </div>
@@ -59,7 +52,7 @@ export default function Home() {
           <button
             className="carousel-control-prev"
             type="button"
-            data-bs-target="#videoCarousel"
+            data-bs-target="#imageCarousel"
             data-bs-slide="prev"
           >
             <span className="carousel-control-prev-icon" />
@@ -67,7 +60,7 @@ export default function Home() {
           <button
             className="carousel-control-next"
             type="button"
-            data-bs-target="#videoCarousel"
+            data-bs-target="#imageCarousel"
             data-bs-slide="next"
           >
             <span className="carousel-control-next-icon" />
