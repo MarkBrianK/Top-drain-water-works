@@ -36,7 +36,7 @@ export default function Home() {
                       style={{
                         width: "100%",
                         height: "100%",
-                        objectFit: "contain",
+                        objectFit: "cover",
                         background: "linear-gradient(to bottom,rgb(182, 195, 231),rgb(140, 170, 214))"
                       }} />
                     <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
