@@ -24,7 +24,14 @@ export default function Header() {
             height="125"
             className="d-inline-block align-top me-2"
           />
-          <span className="fw-bold text-primary">TopDrain Waterworks LTD</span>
+          <div>
+            <div className="fw-bold text-dark" style={{ fontSize: "24px" }}>
+              TopDrain Waterworks LTD
+            </div>
+            <div style={{ fontSize: "16px", fontStyle: "italic", color: "#007bff", lineHeight: "1.2", marginLeft:"30px" }}>
+              Flowing Solutions, Lasting Excellence!
+            </div>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

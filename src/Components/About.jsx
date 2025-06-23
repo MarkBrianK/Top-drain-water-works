@@ -66,8 +66,8 @@ export default function About() {
               src={founder1}
               alt="Muriithi Mwangi"
               style={{
-                width: "150px",
-                height: "150px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
                 objectFit: "contain",
                 objectPosition: "center",
@@ -91,8 +91,8 @@ export default function About() {
               src={founder2}
               alt="Maina Ndegwa"
               style={{
-                width: "150px",
-                height: "150px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
                 objectFit: "contain",
                 objectPosition: "center",
