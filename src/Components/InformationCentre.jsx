@@ -16,7 +16,7 @@ export default function InformationCentre() {
           🛠️ [May 2025] Overhead tank cleaning and pipe rerouting at Kinga'ara Road, Lavington – water pressure restored.
         </button>
         <button className="list-group-item list-group-item-action text-start">
-          🐖 [May 2025] Installed automated nipple drinkers in pig stay for clean drinking water in Ngiriambu, Kirinyaga.
+          🐖 [May 2025] Installed automated nipple drinkers in pig stay for clean drinking water in Mukurueini, Nyeri.
         </button>
         <button className="list-group-item list-group-item-action text-start">
           🚿 [April 2025] Full bathroom & kitchen renovation with concealed plumbing on Kinga'ara Road, Nairobi.
