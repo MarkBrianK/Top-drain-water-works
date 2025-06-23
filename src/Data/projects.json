@@ -1,96 +1,74 @@
 [
-    {
-        "title": "Four-Storey Apartment Wastewater Drainage Pipe Layout",
-        "description": "Executed the complete ground floor plumbing and wastewater drainage system for a 48-unit residential apartment in Joska. The scope included main water supply line positioning, drainage slope alignment, and foundational pipework installation to support upper-level extensions in the next project phase.",
-        "location": "Joska, Kangundo Road",
-        "images": [
-            "Joska_1_vpmmqh.jpg",
-            "Joska_2_ydqmz8.jpg",
-            "Joska_3_bwaxoi.jpg",
-            "Joska_4_quqwba.jpg",
-            "Joska_5_axhzoh.jpg"
-        ]
-    },
-    {
-        "title": "5-Bedroom Villa Plumbing Maintenance and Repair Works",
-        "description": "Comprehensive plumbing repair and maintenance works for a luxurious 5-bedroom villa in Lavington. Services included leak detection, water pressure correction, valve replacements, and optimization of hot and cold water supply lines to ensure long-term reliability and efficiency.",
-        "location": "Amboseli Lane, Lavington, Nairobi",
-        "images": [
-            "amboseli_5_mwwatq.jpg",
-            "amboseli_1_dar6zx.jpg",
-            "amboseli_2_tdjng3.jpg",
-            "amboseli_3_xfmnvq.jpg",
-            "amboseli_4_xtlnue.jpg"
-        ]
-    },
-    {
-        "title": "",
-        "description": "",
-        "location": "",
-        "images": [
-            "",
-            "",
-            ""
-        ]
-    },
-    {
-        "title": "",
-        "description": "",
-        "location": "",
-        "images": [
-            "",
-            "",
-            ""
-        ]
-    },
-    {
-        "title": "",
-        "description": "",
-        "location": "",
-        "images": [
-            "",
-            "",
-            ""
-        ]
-    },
-    {
-        "title": "",
-        "description": "",
-        "location": "",
-        "images": [
-            "",
-            "",
-            ""
-        ]
-    },
-    {
-        "title": "",
-        "description": "",
-        "location": "",
-        "images": [
-            "",
-            "",
-            ""
-        ]
-    },
-    {
-        "title": "",
-        "description": "",
-        "location": "",
-        "images": [
-            "",
-            "",
-            ""
-        ]
-    },
-    {
-        "title": "",
-        "description": "",
-        "location": "",
-        "images": [
-            "",
-            "",
-            ""
-        ]
-    }
+  {
+    "title": "Four-Storey Apartment Wastewater Drainage Pipe Layout",
+    "description": "Executed the complete ground floor plumbing and wastewater drainage system for a 48-unit residential apartment in Joska. The scope included main water supply line positioning, drainage slope alignment, and foundational pipework installation to support upper-level extensions in the next project phase.",
+    "location": "Joska, Kangundo Road",
+    "images": [
+      "Joska_1_vpmmqh.jpg",
+      "Joska_2_ydqmz8.jpg",
+      "Joska_3_bwaxoi.jpg",
+      "Joska_4_quqwba.jpg",
+      "Joska_5_axhzoh.jpg"
+    ]
+  },
+  {
+    "title": "5-Bedroom Villa Plumbing Maintenance and Repair Works",
+    "description": "Comprehensive plumbing repair and maintenance works for a luxurious 5-bedroom villa in Lavington. Services included leak detection, water pressure correction, valve replacements, and optimization of hot and cold water supply lines to ensure long-term reliability and efficiency.",
+    "location": "Amboseli Lane, Lavington, Nairobi",
+    "images": [
+      "amboseli_5_mwwatq.jpg",
+      "amboseli_1_dar6zx.jpg",
+      "amboseli_2_tdjng3.jpg",
+      "amboseli_3_xfmnvq.jpg",
+      "amboseli_4_xtlnue.jpg"
+    ]
+  },
+  {
+    "title": "Solar Water Heater Maintenance and Servicing",
+    "description": "Performed routine servicing and performance diagnostics on a rooftop solar water heating system. Tasks included descaling, leak inspection, pipe insulation checks, and re-pressurizing the system for optimal energy efficiency and hot water delivery throughout the household.",
+    "location": "Amboseli Lane, Lavington, Nairobi",
+    "images": [
+      "Solar_1_lolesf.jpg",
+      "Solar_2_jykhxk.jpg",
+      "Solar_3_ztlxxk.jpg",
+      "Solar_4_dtagn3.jpg",
+      "Solar_5_u8fqe5.jpg"
+    ]
+  },
+  {
+    "title": "",
+    "description": "",
+    "location": "",
+    "images": ["", "", ""]
+  },
+  {
+    "title": "",
+    "description": "",
+    "location": "",
+    "images": ["", "", ""]
+  },
+  {
+    "title": "",
+    "description": "",
+    "location": "",
+    "images": ["", "", ""]
+  },
+  {
+    "title": "",
+    "description": "",
+    "location": "",
+    "images": ["", "", ""]
+  },
+  {
+    "title": "",
+    "description": "",
+    "location": "",
+    "images": ["", "", ""]
+  },
+  {
+    "title": "",
+    "description": "",
+    "location": "",
+    "images": ["", "", ""]
+  }
 ]
