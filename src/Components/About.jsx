@@ -1,20 +1,20 @@
 import React from "react";
 import founder1 from "../Assets/Images/Victor.jpg";
 import founder2 from "../Assets/Images/Jason.jpg";
+import pipes from "../Assets/Images/pipes.jpg"
 
 export default function About() {
   return (
     <div className="about-page">
-      {/* Header Section */}
       <section
         className="text-white text-center py-5"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${pipes})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           color: 'white',
-          minHeight: '200px',
+          minHeight: '400px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -23,7 +23,7 @@ export default function About() {
       >
         <div className="container">
           <h1 className="fw-semibold display-5 mb-2">
-             <span  style={{ color: "rgba(51, 170, 250, 0.9)" }}>TopDrain WaterWorks LTD</span>
+             <span  style={{ color: "rgba(208, 212, 216, 0.9)" }}>TopDrain WaterWorks LTD</span>
           </h1>
           <p className="lead fw-light" style={{ fontStyle: "italic", opacity: 0.9 }}>
             Flowing Solutions, Lasting Excellence!
