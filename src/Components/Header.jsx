@@ -108,11 +108,14 @@ export default function Header() {
 
         .brand-title {
           font-size: 20px;
-          color: #004b9a;
+          color: #000;
         }
 
         .small-tagline {
           font-size: 13px;
+          color: #004b9a !important;
+          font-weight: 600;
+          margin-left: 20px;
         }
 
         .desktop-link {
