@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../Assets/Images/logo.jpg";
+import logo from "../Assets/Images/logo.png";
 
 export default function Header() {
   const navItems = [
@@ -15,13 +15,13 @@ export default function Header() {
   ];
 
   return (
-    <Navbar expand="md" className="shadow-sm bg-white" style={{ maxHeight: "120px" }}>
+    <Navbar expand="md" className="shadow-sm bg-white" style={{ maxHeight: "135px" }}>
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img
             src={logo}
             alt="TopDrain Logo"
-            height="100"
+            height="125"
             className="d-inline-block align-top me-2"
           />
           <span className="fw-bold text-primary">TopDrain Waterworks LTD</span>

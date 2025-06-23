@@ -14,18 +14,18 @@ export default function ContactUs() {
           <p><FaPhoneAlt className="me-2" /> +254 702 263 360</p>
           <p><FaPhoneAlt className="me-2" /> +254 758 519 850</p>
           <p><FaEnvelope className="me-2" /> info@topdrainlimited.com</p>
-<div className="mt-4">
-  <iframe
-    title="TopDrain WaterWoks Location"
-    src="https://www.google.com/maps?q=-1.3006066,36.7811727&hl=en&z=16&output=embed"
-    width="100%"
-    height="250"
-    style={{ border: 0 }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
+          <div className="mt-4">
+            <iframe
+              title="TopDrain WaterWoks Location"
+              src="https://www.google.com/maps?q=-1.3006066,36.7811727&hl=en&z=16&output=embed"
+              width="100%"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
 
 
 
