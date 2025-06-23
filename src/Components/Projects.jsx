@@ -24,7 +24,7 @@ export default function Projects() {
         {data.map((project, index) => (
           <div className="col-md-6 col-lg-4" key={index}>
             <div
-              className="card border-0 shadow-sm h-100"
+              className="card border-1 shadow-sm h-100"
               style={{
                 borderRadius: "16px",
                 overflow: "hidden",
