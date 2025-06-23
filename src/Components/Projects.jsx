@@ -3,7 +3,6 @@ import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
 import { auto } from "@cloudinary/url-gen/qualifiers/format";
 import { auto as qualityAuto } from "@cloudinary/url-gen/qualifiers/quality";
-import { fill } from "@cloudinary/url-gen/actions/resize";
 
 import data from "../Data/projects.json";
 
@@ -44,32 +43,43 @@ export default function Projects() {
                 className="carousel slide"
                 data-bs-ride="carousel"
               >
-                <div className="carousel-inner">
+                <div className="carousel-inner bg-dark">
                   {project.images.map((publicId, imgIndex) => {
                     const cldImg = cld
                       .image(publicId)
                       .format(auto())
-                      .quality(qualityAuto())
-                      .resize(fill().width(600).height(250));
+                      .quality(qualityAuto());
 
                     return (
                       <div
                         key={imgIndex}
                         className={`carousel-item ${imgIndex === 0 ? "active" : ""}`}
                       >
-                        <AdvancedImage
-                          cldImg={cldImg}
-                          className="d-block w-100"
+                        <div
                           style={{
-                            height: "250px",
-                            objectFit: "cover",
+                            width: "100%",
+                            height: "300px",
+                            backgroundColor: "#FFFFFF",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                           }}
-                          alt={`Project ${index + 1} Image ${imgIndex + 1}`}
-                        />
+                        >
+                          <AdvancedImage
+                            cldImg={cldImg}
+                            style={{
+                              maxWidth: "100%",
+                              maxHeight: "100%",
+                              objectFit: "contain",
+                            }}
+                            alt={`Project ${index + 1} Image ${imgIndex + 1}`}
+                          />
+                        </div>
                       </div>
                     );
                   })}
                 </div>
+
                 {project.images.length > 1 && (
                   <>
                     <button
