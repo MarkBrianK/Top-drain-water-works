@@ -11,7 +11,7 @@ export default function Careers() {
       <div className="bg-light p-4 rounded mb-4">
         <h5 className="fw-bold">Current Needs (Updated Weekly):</h5>
         <ul className="mb-0">
-          <li>🔧 Plumber's assistants</li>
+          <li>🔧 Plumbing Technicians</li>
           <li>🧱 Trench diggers & general laborers</li>
           <li>🚛 Delivery & materials runners</li>
         </ul>
@@ -23,7 +23,7 @@ export default function Careers() {
 
       <p className="text-center">
         📩 <a href="mailto:casuals@topdrainlimited.com">careers@topdrainlimited.com</a><br />
-        📱 WhatsApp: <a href="https://wa.me/255702263360" target="_blank" rel="noopener noreferrer">+254 712 345 678</a>
+        📱 WhatsApp: <a href="https://wa.me/254702263360" target="_blank" rel="noopener noreferrer">+254 702 263 360</a>
       </p>
     </div>
   );
