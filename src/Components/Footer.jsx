@@ -10,7 +10,7 @@ import {
   FaProjectDiagram,
   FaEnvelopeOpenText,
   FaInfoCircle,
-  FaBookOpen 
+  FaBookOpen
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,6 @@ export default function Footer() {
       className="text-white position-relative"
       style={{
         background: "linear-gradient(135deg, #4e91f9, #0049b7)",
-        clipPath: "ellipse(100% 100% at 50% 100%)",
         paddingTop: "60px",
         paddingBottom: "100px",
         marginTop: "60px"
