@@ -14,7 +14,7 @@ export default function About() {
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           color: 'white',
-          minHeight: '400px',
+          minHeight: '300px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
