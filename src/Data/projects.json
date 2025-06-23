@@ -1,101 +1,118 @@
 [
-  {
-    "title": "Four-Storey Apartment Wastewater Drainage Pipe Layout",
-    "description": "Executed the complete ground floor plumbing and wastewater drainage system for a 48-unit residential apartment in Joska. The scope included main water supply line positioning, drainage slope alignment, and foundational pipework installation to support upper-level extensions in the next project phase.",
-    "location": "Joska, Kangundo Road, Machakos",
-    "images": [
-      "Joska_1_vpmmqh.jpg",
-      "Joska_2_ydqmz8.jpg",
-      "Joska_3_bwaxoi.jpg",
-      "Joska_4_quqwba.jpg",
-      "Joska_5_axhzoh.jpg"
-    ]
-  },
-  {
-    "title": "5-Bedroom Villa Plumbing Maintenance and Repair Works",
-    "description": "Comprehensive plumbing repair and maintenance works for a luxurious 5-bedroom villa in Lavington. Services included leak detection, water pressure correction, valve replacements, and optimization of hot and cold water supply lines to ensure long-term reliability and efficiency.",
-    "location": "Amboseli Lane, Lavington, Nairobi",
-    "images": [
-      "amboseli_5_mwwatq.jpg",
-      "amboseli_1_dar6zx.jpg",
-      "amboseli_2_tdjng3.jpg",
-      "amboseli_3_xfmnvq.jpg",
-      "amboseli_4_xtlnue.jpg"
-    ]
-  },
-  {
-    "title": "Solar Water Heater Maintenance and Servicing",
-    "description": "Performed routine servicing and performance diagnostics on a rooftop solar water heating system. Tasks included descaling, leak inspection, pipe insulation checks, and re-pressurizing the system for optimal energy efficiency and hot water delivery throughout the household.",
-    "location": "Amboseli Lane, Lavington, Nairobi",
-    "images": [
-      "Solar_1_lolesf.jpg",
-      "Solar_2_jykhxk.jpg",
-      "Solar_3_ztlxxk.jpg",
-      "Solar_4_dtagn3.jpg",
-      "Solar_5_u8fqe5.jpg"
-    ]
-  },
-  {
-    "title": "Concealed Cistern Replacement",
-    "description": "Completed removal and replacement of a faulty concealed cistern unit at The Location Rooftop Lounge. Tasks included breaking tilework, replacing the in-wall cistern mechanism, waterproofing, tiling restoration, and full system testing for leak-free operation and modern functionality.",
-    "location": "The Location Rooftop Lounge, Yaya, Nairobi",
-    "images": [
-      "Location_5_xyk0gl.jpg",
-      "Location_2_rslwtq.jpg",
-      "Location_6_be0fk0.jpg",
-      "Location_3_dm3lyp.jpg",
-      "Location_4_bc4ked.jpg"
-    ]
-  },
-  {
-    "title": "Water Supply and Wastewater Drainage Installation – 4-Bedroom Maisonette",
-    "description": "Installed full-scale plumbing infrastructure for a 4-bedroom maisonette in Juja Farm. Scope included internal and external piping for both clean water supply and wastewater disposal, bathroom and kitchen connections, and an integrated stormwater management system tailored for optimal drainage in the area.",
-    "location": "Juja Farm, Kiambu",
-    "images": [
-      "Juja_farm_2_bzj6i5.jpg",
-      "Juja_farm_1_ydhmgn.jpg",
-      "Juja_farm_3_ggmsju.jpg",
-      "Juja_farm_4_fnvh3t.jpg",
-      "Juja_farm_5_xeljxg.jpg",
-      "Juja_farm_6_co6q9z.jpg",
-      "Juja_farm7_eemitl.jpg",
-      "Juja_farm_8_zljmdd.jpg",
-      "Juja_farm_9_virlmr.jpg",
-      "Juja_farm_10_qual5b.jpg"
-    ]
-  },
-  {
-    "title": "Overhead Water Tanks Cleaning, Servicing, and Pipework Management",
-    "description": "Conducted deep cleaning and full servicing of multiple rooftop overhead water storage tanks. The process involved draining, scrubbing, disinfecting, inspecting structural integrity, and flushing supply lines. Additionally, pipework rerouting and sealing improvements were done to enhance distribution efficiency and hygiene.",
-    "location": "Kinga'ara Road, Lavington, Nairobi",
-    "images": [
-      "King_ara_1_rmvj5k.jpg",
-      "King_ara_2_v8w8uf.jpg",
-      "King_ara_3_dvxkrt.jpg",
-      "King_ara_4_gyffhz.jpg",
-      "King_ara_5_qry69e.jpg",
-      "King_ara_6_i2smiw.jpg",
-      "King_ara_7_rbxmzb.jpg",
-      "King_ara_8_ajtohd.jpg",
-      "King_ara_9_l7cszu.jpg"
-    ]
-  },
-  {
-    "title": "",
-    "description": "",
-    "location": "",
-    "images": ["", "", ""]
-  },
-  {
-    "title": "",
-    "description": "",
-    "location": "",
-    "images": ["", "", ""]
-  },
-  {
-    "title": "",
-    "description": "",
-    "location": "",
-    "images": ["", "", ""]
-  }
+    {
+        "title": "Four-Storey Apartment Wastewater Drainage Pipe Layout",
+        "description": "Executed the complete ground floor plumbing and wastewater drainage system for a 48-unit residential apartment in Joska. The scope included main water supply line positioning, drainage slope alignment, and foundational pipework installation to support upper-level extensions in the next project phase.",
+        "location": "Joska, Kangundo Road, Machakos",
+        "images": [
+            "Joska_1_vpmmqh.jpg",
+            "Joska_2_ydqmz8.jpg",
+            "Joska_3_bwaxoi.jpg",
+            "Joska_4_quqwba.jpg",
+            "Joska_5_axhzoh.jpg"
+        ]
+    },
+    {
+        "title": "5-Bedroom Villa Plumbing Maintenance and Repair Works",
+        "description": "Comprehensive plumbing repair and maintenance works for a luxurious 5-bedroom villa in Lavington. Services included leak detection, water pressure correction, valve replacements, and optimization of hot and cold water supply lines to ensure long-term reliability and efficiency.",
+        "location": "Amboseli Lane, Lavington, Nairobi",
+        "images": [
+            "amboseli_5_mwwatq.jpg",
+            "amboseli_1_dar6zx.jpg",
+            "amboseli_2_tdjng3.jpg",
+            "amboseli_3_xfmnvq.jpg",
+            "amboseli_4_xtlnue.jpg"
+        ]
+    },
+    {
+        "title": "Solar Water Heater Maintenance and Servicing",
+        "description": "Performed routine servicing and performance diagnostics on a rooftop solar water heating system. Tasks included descaling, leak inspection, pipe insulation checks, and re-pressurizing the system for optimal energy efficiency and hot water delivery throughout the household.",
+        "location": "Amboseli Lane, Lavington, Nairobi",
+        "images": [
+            "Solar_1_lolesf.jpg",
+            "Solar_2_jykhxk.jpg",
+            "Solar_3_ztlxxk.jpg",
+            "Solar_4_dtagn3.jpg",
+            "Solar_5_u8fqe5.jpg"
+        ]
+    },
+    {
+        "title": "Concealed Cistern Replacement",
+        "description": "Completed removal and replacement of a faulty concealed cistern unit at The Location Rooftop Lounge. Tasks included breaking tilework, replacing the in-wall cistern mechanism, waterproofing, tiling restoration, and full system testing for leak-free operation and modern functionality.",
+        "location": "The Location Rooftop Lounge, Yaya, Nairobi",
+        "images": [
+            "Location_5_xyk0gl.jpg",
+            "Location_2_rslwtq.jpg",
+            "Location_6_be0fk0.jpg",
+            "Location_3_dm3lyp.jpg",
+            "Location_4_bc4ked.jpg"
+        ]
+    },
+    {
+        "title": "Water Supply and Wastewater Drainage Installation – 4-Bedroom Maisonette",
+        "description": "Installed full-scale plumbing infrastructure for a 4-bedroom maisonette in Juja Farm. Scope included internal and external piping for both clean water supply and wastewater disposal, bathroom and kitchen connections, and an integrated stormwater management system tailored for optimal drainage in the area.",
+        "location": "Juja Farm, Kiambu",
+        "images": [
+            "Juja_farm_2_bzj6i5.jpg",
+            "Juja_farm_1_ydhmgn.jpg",
+            "Juja_farm_3_ggmsju.jpg",
+            "Juja_farm_4_fnvh3t.jpg",
+            "Juja_farm_5_xeljxg.jpg",
+            "Juja_farm_6_co6q9z.jpg",
+            "Juja_farm7_eemitl.jpg",
+            "Juja_farm_8_zljmdd.jpg",
+            "Juja_farm_9_virlmr.jpg",
+            "Juja_farm_10_qual5b.jpg"
+        ]
+    },
+    {
+        "title": "Overhead Water Tanks Cleaning, Servicing, and Pipework Management",
+        "description": "Conducted deep cleaning and full servicing of multiple rooftop overhead water storage tanks. The process involved draining, scrubbing, disinfecting, inspecting structural integrity, and flushing supply lines. Additionally, pipework rerouting and sealing improvements were done to enhance distribution efficiency and hygiene.",
+        "location": "Kinga'ara Road, Lavington, Nairobi",
+        "images": [
+            "King_ara_1_rmvj5k.jpg",
+            "King_ara_2_v8w8uf.jpg",
+            "King_ara_3_dvxkrt.jpg",
+            "King_ara_4_gyffhz.jpg",
+            "King_ara_5_qry69e.jpg",
+            "King_ara_6_i2smiw.jpg",
+            "King_ara_7_rbxmzb.jpg",
+            "King_ara_8_ajtohd.jpg",
+            "King_ara_9_l7cszu.jpg"
+        ]
+    },
+    {
+        "title": "Bathroom Renovations and Kitchen Faucet Replacement",
+        "description": "Complete bathroom overhaul involving replacement of fittings, new concealed plumbing lines, tiling upgrades, and water-saving fixture installations. Renovation aimed at modernizing design, improving water efficiency, and enhancing user comfort in a premium residential unit.",
+        "location": "Kinga'ara Road, Lavington, Nairobi",
+        "images": [
+            "Lavington_9_nvdvpy.jpg",
+            "Lavington_2_z7mbqx.jpg",
+            "Lavington_3_mmem6h.jpg",
+            "Lavington_4_gazwyd.jpg",
+            "Lavington_5_ftjzdc.jpg",
+            "Lavington_6_k6hu1x.jpg",
+            "Lavington_7_xuipel.jpg",
+            "Lavington_8_z8xzxb.jpg"
+        ]
+    },
+    {
+        "title": "",
+        "description": "",
+        "location": "",
+        "images": [
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "title": "",
+        "description": "",
+        "location": "",
+        "images": [
+            "",
+            "",
+            ""
+        ]
+    }
 ]
