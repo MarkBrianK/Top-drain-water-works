@@ -6,11 +6,32 @@ export default function About() {
   return (
     <div className="about-page">
       {/* Header Section */}
-      <section className="bg-primary text-white text-center py-5">
+      <section
+        className="text-white text-center py-5"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          color: 'white',
+          minHeight: '200px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column'
+        }}
+      >
         <div className="container">
-          <h1 className="fw-bold">About TopDrain WaterWorks LTD</h1>
+          <h1 className="fw-semibold display-5 mb-2">
+             <span  style={{ color: "rgba(51, 170, 250, 0.9)" }}>TopDrain WaterWorks LTD</span>
+          </h1>
+          <p className="lead fw-light" style={{ fontStyle: "italic", opacity: 0.9 }}>
+            Flowing Solutions, Lasting Excellence!
+          </p>
         </div>
       </section>
+
+
 
       {/* Company Overview */}
       <section className="container py-5">
@@ -25,7 +46,7 @@ export default function About() {
           With a dynamic team of experienced engineers, technicians, and project managers — many with over 8 years of hands-on experience — we pride ourselves on combining technical expertise with local knowledge to meet the unique water infrastructure needs of residential, commercial, and public-sector clients.
         </p>
         <p>
-          <span style={{fontWeight:"bold"}}>Our goal is simple: </span>to create resilient water and drainage systems that protect communities, conserve resources, and enable growth.
+          <span style={{ fontWeight: "bold" }}>Our goal is simple: </span>to create resilient water and drainage systems that protect communities, conserve resources, and enable growth.
         </p>
         <p>
           Whether it's managing stormwater in flood-prone areas, installing efficient plumbing systems, or providing 24/7 maintenance support, TopDrain Waterworks is your trusted partner in building water-smart environments.
