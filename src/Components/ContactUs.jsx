@@ -17,7 +17,7 @@ export default function ContactUs() {
           <div className="mt-4">
             <iframe
               title="TopDrain WaterWoks Location"
-              src="https://www.google.com/maps?q=-1.3006066,36.7811727&hl=en&z=16&output=embed"
+              src="https://www.google.com/maps?q=-1.2991070901121253,36.799981844423876&hl=en&z=16&output=embed"
               width="100%"
               height="250"
               style={{ border: 0 }}

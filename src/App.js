@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import LoadingSpinner from './Resources/LoadingSpinner';
+import ScrollToTop from './Resources/ScrollTop';
 
 import Home from './Components/Home';
 import About from './Components/About';
@@ -20,10 +21,8 @@ export default function App() {
     const handleLoad = () => setLoading(false);
 
     if (document.readyState === 'complete') {
-
       handleLoad();
     } else {
-      
       window.addEventListener('load', handleLoad);
       return () => window.removeEventListener('load', handleLoad);
     }
@@ -35,6 +34,7 @@ export default function App() {
         <LoadingSpinner />
       ) : (
         <Router>
+          <ScrollToTop />
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

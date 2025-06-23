@@ -33,16 +33,16 @@ export default function Header() {
             style={{ objectFit: "contain" }}
           />
           <div>
-            <h5 className="mb-0 fw-bold text-primary" style={{ fontSize: "20px" }}>
+            <h5 className="mb-0 fw-bold brand-title">
               TopDrain Waterworks LTD
             </h5>
-            <div className="text-muted fst-italic" style={{ fontSize: "13px" }}>
+            <div className="text-muted fst-italic small-tagline">
               Flowing Solutions, Lasting Excellence!
             </div>
           </div>
         </Navbar.Brand>
 
-        {/* Mobile Toggle */}
+        {/* Toggle (Mobile) */}
         <button
           className="navbar-toggler border-0"
           type="button"
@@ -52,7 +52,7 @@ export default function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <div className="d-none d-md-flex ms-auto">
           <Nav>
             {navItems.map(({ name, path }) => (
@@ -60,8 +60,8 @@ export default function Header() {
                 as={Link}
                 to={path}
                 key={name}
-                className={`fw-semibold mx-2 ${
-                  location.pathname === path ? "text-primary" : "text-dark"
+                className={`fw-semibold mx-2 desktop-link ${
+                  location.pathname === path ? "active" : ""
                 }`}
               >
                 {name}
@@ -70,16 +70,17 @@ export default function Header() {
           </Nav>
         </div>
 
-        {/* Offcanvas Sidebar */}
+        {/* Offcanvas Menu */}
         <Offcanvas
           show={showOffcanvas}
           onHide={handleClose}
           placement="end"
           className="simple-offcanvas"
+          style={{
+            backgroundColor: "transparent",
+            backdropFilter: "blur(8px)",
+          }}
         >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title className="fw-bold text-primary">Navigation</Offcanvas.Title>
-          </Offcanvas.Header>
           <Offcanvas.Body className="pt-2">
             <Nav className="flex-column">
               {navItems.map(({ name, path }) => (
@@ -100,22 +101,44 @@ export default function Header() {
         </Offcanvas>
       </Container>
 
-      {/* Clean styling */}
       <style>{`
         .simple-offcanvas {
           width: 250px;
-          background-color: #ffffff;
+        }
+
+        .brand-title {
+          font-size: 20px;
+          color: #004b9a;
+        }
+
+        .small-tagline {
+          font-size: 13px;
+        }
+
+        .desktop-link {
+          font-size: 16px;
+          color: #004080;
+          transition: color 0.2s ease;
+        }
+
+        .desktop-link:hover {
+          color: #007bff !important;
+        }
+
+        .desktop-link.active {
+          color: #007bff !important;
         }
 
         .simple-link {
           font-size: 16px;
           font-weight: 500;
-          color: #333;
+          color:rgb(216, 229, 241);
           margin-bottom: 4px;
+          transition: all 0.2s ease;
         }
 
         .simple-link:hover {
-          background-color: #f1f1f1;
+          background-color: rgba(0, 123, 255, 0.1);
           color: #007bff !important;
         }
 
@@ -124,8 +147,13 @@ export default function Header() {
           color: #fff !important;
         }
 
+        .offcanvas-title {
+          font-size: 1.2rem;
+          color:rgb(224, 233, 243);
+        }
+
         .navbar-toggler-icon {
-          filter: brightness(0.2);
+          filter: brightness(0.3);
         }
       `}</style>
     </Navbar>
