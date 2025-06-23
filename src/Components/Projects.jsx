@@ -15,10 +15,7 @@ const cld = new Cloudinary({
 export default function Projects() {
   return (
     <div className="container py-5">
-      <h1 className="fw-bold text-center mb-4">Our Projects</h1>
-      <p className="text-center mb-5 fs-5 text-muted">
-        A showcase of recent and ongoing water infrastructure projects across Kenya.
-      </p>
+      <h2 className="fw-semibold text-center mb-4">Our Projects</h2>
 
       <div className="row g-4">
         {data.map((project, index) => (
