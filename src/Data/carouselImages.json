@@ -1,27 +1,27 @@
 [
   {
-    "publicId": "tanks_n09sa6",
-    "title": "Overhead Tank Installations",
-    "description": "Efficient water storage and distribution systems."
+    "publicId": "Modern_bathroom_utilities_n7uwlv.jpg",
+    "title": "Modern Bathroom Utilities",
+    "description": "Comprehensive installation and maintenance of toilets, sinks, showers, bathtubs, bidets, faucets, and drainage systems — tailored for modern functionality and lasting comfort."
   },
   {
-    "publicId": "pipe_trwtm7",
-    "title": "Piping Solutions",
-    "description": "Durable and reliable plumbing infrastructure."
-  },
-  {
-    "publicId": "Washroom_tvag2c",
-    "title": "Bathroom Renovations",
-    "description": "Modern and hygienic sanitary systems."
-  },
-  {
-    "publicId": "Sink_irmw1q",
-    "title": "Sink Plumbing",
-    "description": "Functional and aesthetic Bathroom fixtures."
+    "publicId": "Sewer_mnagement_lxx7l6.jpg",
+    "title": "Sewer Management",
+    "description": "Design, installation, and maintenance of efficient sewer systems to ensure safe wastewater disposal, prevent blockages, and protect public health and the environment."
   },
   {
     "publicId": "Heater_rawt1t",
     "title": "Water Heater Installations",
-    "description": "Energy-efficient hot water solutions."
+    "description": "Installation and maintenance of energy-efficient water heating systems, including instant, storage, and solar heaters — delivering consistent hot water supply for residential and commercial use."
+  },
+  {
+    "publicId": "tanks_n09sa6",
+    "title": "Overhead Water Tank Installations",
+    "description": "Expert installation of elevated storage tanks designed for optimal water pressure, durability, and uninterrupted supply in homes, businesses, and institutions."
+  },
+  {
+    "publicId": "pipe_trwtm7",
+    "title": "Advanced Piping Systems",
+    "description": "Design and deployment of robust piping infrastructure using high-quality materials to ensure leak-free, long-lasting, and efficient water flow management."
   }
 ]
