@@ -71,17 +71,16 @@ export default function Home() {
       {/* Services Section */}
       <section>
         <div className="text-center mb-5">
-          <h1 className="fw-bold">
+          <h1 className="fw-semibold">
             <span
               style={{
                 display: "inline-block",
-                backgroundColor: "#d0e7ff",
+                color: "#007bff",
                 padding: "0 5px"
               }}
             >
-              Our Core
+              Our Core Services
             </span>{" "}
-            <span style={{ fontSize: "1.2rem" }}>Services</span>
           </h1>
         </div>
 
