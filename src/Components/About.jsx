@@ -12,47 +12,68 @@ export default function About() {
         </div>
       </section>
 
-      {/* Who We Are */}
+      {/* Company Overview */}
       <section className="container py-5">
         <h2 className="fw-bold mb-4">Who We Are</h2>
         <p>
-          TopDrain Water Works LTD is a leading water and civil engineering company
-          based in Nairobi, Kenya. We are committed to delivering innovative, sustainable,
-          and high-quality solutions in water infrastructure, construction, and consultancy services.
-          Our goal is to improve lives through better access to clean water and modern infrastructure.
+          TopDrain Waterworks Limited is a premier water systems engineering company
+          dedicated to delivering high-quality, sustainable, and innovative solutions across Kenya.
+          We specialize in flood control, plumbing works, sewer management, drainage works,
+          firefighting systems, water supply systems, and drainage maintenance and repairs.
+        </p>
+        <p>
+          With a dynamic team of experienced engineers, technicians, and project managers — many with over 8 years of hands-on experience — we pride ourselves on combining technical expertise with local knowledge to meet the unique water infrastructure needs of residential, commercial, and public-sector clients.
+        </p>
+        <p>
+          <span style={{fontWeight:"bold"}}>Our goal is simple: </span>to create resilient water and drainage systems that protect communities, conserve resources, and enable growth.
+        </p>
+        <p>
+          Whether it's managing stormwater in flood-prone areas, installing efficient plumbing systems, or providing 24/7 maintenance support, TopDrain Waterworks is your trusted partner in building water-smart environments.
         </p>
       </section>
 
-      {/* Vision, Mission, Values */}
+      {/* Why Choose Us */}
       <section className="bg-light py-5">
         <div className="container">
-          <div className="row text-center">
-            <div className="col-md-4 mb-4">
-              <h4 className="fw-bold">Our Vision</h4>
-              <p>
-                To be the most trusted water and infrastructure solutions provider in Africa,
-                delivering excellence and sustainability in every project.
-              </p>
-            </div>
+          <h2 className="fw-bold text-center mb-4">Why Choose Us</h2>
+          <ul className="list-unstyled text-center">
+            <li className="mb-3">✅ Proven track record in complex water and drainage projects</li>
+            <li className="mb-3">✅ A dedicated team of certified professionals</li>
+            <li className="mb-3">✅ Commitment to quality workmanship and environmental sustainability</li>
+            <li className="mb-3">✅ Reliable support from design to maintenance</li>
+          </ul>
+          <p className="text-center fw-semibold mt-4">Let’s build better water systems — together.</p>
+        </div>
+      </section>
 
-            <div className="col-md-4 mb-4">
-              <h4 className="fw-bold">Our Mission</h4>
-              <p>
-                To offer reliable and innovative engineering services that meet the water
-                and infrastructure needs of communities and institutions across the region.
-              </p>
-            </div>
+      {/* Vision, Mission, Values */}
+      <section className="container py-5">
+        <div className="row text-center">
+          <div className="col-md-4 mb-4">
+            <h4 className="fw-bold">Our Vision</h4>
+            <p>
+              To be the most trusted water and infrastructure solutions provider in Africa,
+              delivering excellence and sustainability in every project.
+            </p>
+          </div>
 
-            <div className="col-md-4 mb-4">
-              <h4 className="fw-bold">Our Core Values</h4>
-              <ul className="list-unstyled text-start d-inline-block mx-auto">
-                <li className="mb-2">✅ <span className="ms-2">Integrity</span></li>
-                <li className="mb-2">✅ <span className="ms-2">Professionalism</span></li>
-                <li className="mb-2">✅ <span className="ms-2">Innovation</span></li>
-                <li className="mb-2">✅ <span className="ms-2">Teamwork</span></li>
-                <li className="mb-2">✅ <span className="ms-2">Sustainability</span></li>
-              </ul>
-            </div>
+          <div className="col-md-4 mb-4">
+            <h4 className="fw-bold">Our Mission</h4>
+            <p>
+              To offer reliable and innovative engineering services that meet the water
+              and infrastructure needs of communities and institutions across the region.
+            </p>
+          </div>
+
+          <div className="col-md-4 mb-4">
+            <h4 className="fw-bold">Our Core Values</h4>
+            <ul className="list-unstyled text-start d-inline-block mx-auto">
+              <li className="mb-2">✅ <span className="ms-2">Integrity</span></li>
+              <li className="mb-2">✅ <span className="ms-2">Professionalism</span></li>
+              <li className="mb-2">✅ <span className="ms-2">Innovation</span></li>
+              <li className="mb-2">✅ <span className="ms-2">Teamwork</span></li>
+              <li className="mb-2">✅ <span className="ms-2">Sustainability</span></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -76,8 +97,7 @@ export default function About() {
                 border: "2px solid #ddd"
               }}
             />
-
-            <h5 className="fw-bold">Muriithi Mwangi</h5>
+            <h5 className="fw-bold mt-3">Muriithi Mwangi</h5>
             <p className="text-muted">Director of Technical Operations & Strategic Development</p>
             <p>
               Muriithi has over 8 years of hands-on experience in water works and infrastructure development.
@@ -101,7 +121,7 @@ export default function About() {
                 border: "2px solid #ddd"
               }}
             />
-            <h5 className="fw-bold">Maina Ndegwa</h5>
+            <h5 className="fw-bold mt-3">Maina Ndegwa</h5>
             <p className="text-muted">Business Development Director - Water Infrastructure</p>
             <p>
               Maina Ndegwa is a seasoned expert in water infrastructure with a strong focus on business development and stakeholder engagement.
@@ -109,7 +129,6 @@ export default function About() {
               and champions client-centered solutions that align with TopDrain's mission of delivering sustainable water systems across the region.
             </p>
           </div>
-
         </div>
       </section>
     </div>
