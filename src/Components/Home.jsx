@@ -37,7 +37,7 @@ export default function Home() {
                         width: "100%",
                         height: "100%",
                         objectFit: "contain",
-                        background: "linear-gradient(to bottom,rgb(245, 245, 245), #266dd7)"
+                        background: "linear-gradient(to bottom,rgb(182, 195, 231),rgb(140, 170, 214))"
                       }} />
                     <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
                       <h5>{image.title}</h5>
