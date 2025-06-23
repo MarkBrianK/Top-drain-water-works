@@ -19,7 +19,7 @@ export default function Home() {
       </Helmet>
 
       <section className="mb-5">
-        <div id="imageCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="imageCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
           <div className="carousel-inner rounded-4 overflow-hidden">
             {carouselImages.map((image, index) => {
               const cldImage = cld.image(image.publicId).format(auto()).quality(qualityAuto());
