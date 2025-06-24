@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
 import { auto } from "@cloudinary/url-gen/qualifiers/format";
@@ -13,6 +13,84 @@ const cld = new Cloudinary({
 });
 
 export default function Projects() {
+  const carouselRefs = useRef([]);
+
+  useEffect(() => {
+    const bootstrap = require("bootstrap");
+    const refs = [...carouselRefs.current];
+    const carousels = [];
+
+    refs.forEach((carouselEl, index) => {
+      if (carouselEl && data[index].images.length > 1) {
+        const carousel = new bootstrap.Carousel(carouselEl, {
+          interval: false,
+          pause: false,
+          ride: false,
+        });
+
+        let autoplayTimer = null;
+        let startX = 0;
+
+        const startAutoplay = () => {
+          autoplayTimer = setInterval(() => {
+            carousel.next();
+          }, 2500);
+        };
+
+        const stopAutoplay = () => {
+          clearInterval(autoplayTimer);
+        };
+
+        const handleTouchStart = (e) => {
+          startX = e.touches[0].clientX;
+          startAutoplay();
+        };
+
+        const handleTouchEnd = (e) => {
+          const endX = e.changedTouches[0].clientX;
+          const diffX = endX - startX;
+
+          if (Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+              carousel.prev(); // swipe right
+            } else {
+              carousel.next(); // swipe left
+            }
+          }
+
+          stopAutoplay();
+        };
+
+        // Event bindings
+        carouselEl.addEventListener("mouseenter", startAutoplay);
+        carouselEl.addEventListener("mouseleave", stopAutoplay);
+        carouselEl.addEventListener("touchstart", handleTouchStart);
+        carouselEl.addEventListener("touchend", handleTouchEnd);
+
+        // Save for cleanup
+        carousels.push({
+          carouselEl,
+          handlers: {
+            startAutoplay,
+            stopAutoplay,
+            handleTouchStart,
+            handleTouchEnd,
+          },
+        });
+      }
+    });
+
+    // Cleanup
+    return () => {
+      carousels.forEach(({ carouselEl, handlers }) => {
+        carouselEl.removeEventListener("mouseenter", handlers.startAutoplay);
+        carouselEl.removeEventListener("mouseleave", handlers.stopAutoplay);
+        carouselEl.removeEventListener("touchstart", handlers.handleTouchStart);
+        carouselEl.removeEventListener("touchend", handlers.handleTouchEnd);
+      });
+    };
+  }, []);
+
   return (
     <div className="container py-5">
       <h2 className="fw-semibold text-center mb-4">Our Projects</h2>
@@ -34,11 +112,10 @@ export default function Projects() {
                 e.currentTarget.style.transform = "scale(1)";
               }}
             >
-              {/* Carousel */}
               <div
                 id={`carousel-${index}`}
                 className="carousel slide"
-                data-bs-ride="carousel"
+                ref={(el) => (carouselRefs.current[index] = el)}
               >
                 <div className="carousel-inner bg-dark">
                   {project.images.map((publicId, imgIndex) => {
@@ -99,7 +176,6 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* Card Content */}
               <div className="card-body">
                 <h5 className="card-title fw-semibold mb-2">{project.title}</h5>
                 <p className="card-text small text-muted mb-2">
