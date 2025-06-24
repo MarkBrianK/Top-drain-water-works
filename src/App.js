@@ -18,14 +18,11 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const handleLoad = () => setLoading(false);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
 
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-      return () => window.removeEventListener('load', handleLoad);
-    }
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -34,7 +31,9 @@ export default function App() {
       <Header />
       <main>
         {loading ? (
-          <LoadingSpinner />
+          <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '60vh' }}>
+            <LoadingSpinner />
+          </div>
         ) : (
           <Routes>
             <Route path="/" element={<Home />} />
