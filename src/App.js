@@ -32,7 +32,7 @@ function AppRoutes() {
 
     const timer = setTimeout(() => {
       setRouteLoading(false);
-    }, 600); // short delay to simulate loading
+    }, 3000); // short delay to simulate loading
 
     return () => clearTimeout(timer);
   }, [location, navigationType]);
@@ -60,7 +60,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setInitialLoading(false);
-    }, 1000); // initial load spinner (visible 1s)
+    }, 2000); // initial load spinner (visible 1s)
     return () => clearTimeout(timer);
   }, []);
 

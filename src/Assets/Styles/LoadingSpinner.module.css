@@ -19,7 +19,7 @@
   border-radius: 50%;
   top: 50%;
   left: 50%;
-  transform-origin: -20px 0; /* smaller orbit radius */
+  transform-origin: -20px 0;
   animation: spinDot 1s linear infinite;
 }
 
