@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+  useNavigationType,
+} from 'react-router-dom';
 
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -14,14 +20,47 @@ import Feedback from './Components/Feedback';
 import InfoCentre from './Components/InformationCentre';
 import Projects from './Components/Projects';
 
+// Wrapper to handle both initial and route transition loading
+function AppRoutes() {
+  const location = useLocation();
+  const navigationType = useNavigationType();
+
+  const [routeLoading, setRouteLoading] = useState(true);
+
+  useEffect(() => {
+    setRouteLoading(true);
+
+    const timer = setTimeout(() => {
+      setRouteLoading(false);
+    }, 600); // short delay to simulate loading
+
+    return () => clearTimeout(timer);
+  }, [location, navigationType]);
+
+  return routeLoading ? (
+    <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '60vh' }}>
+      <LoadingSpinner />
+    </div>
+  ) : (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/careers" element={<Careers />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/feedback" element={<Feedback />} />
+      <Route path="/info" element={<InfoCentre />} />
+      <Route path="/projects" element={<Projects />} />
+    </Routes>
+  );
+}
+
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
+      setInitialLoading(false);
+    }, 1000); // initial load spinner (visible 1s)
     return () => clearTimeout(timer);
   }, []);
 
@@ -30,20 +69,12 @@ export default function App() {
       <ScrollToTop />
       <Header />
       <main>
-        {loading ? (
+        {initialLoading ? (
           <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '60vh' }}>
             <LoadingSpinner />
           </div>
         ) : (
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/feedback" element={<Feedback />} />
-            <Route path="/info" element={<InfoCentre />} />
-            <Route path="/projects" element={<Projects />} />
-          </Routes>
+          <AppRoutes />
         )}
       </main>
       <Footer />
