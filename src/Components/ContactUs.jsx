@@ -1,9 +1,42 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 export default function ContactUs() {
   return (
     <div className="container py-5">
+      <Helmet>
+        <title>Contact Us | TopDrain WaterWorks LTD</title>
+        <meta
+          name="description"
+          content="Need expert water or drainage solutions in Kenya? Contact TopDrain WaterWorks LTD today via phone, email, or visit us in Nairobi."
+        />
+        <meta
+          name="keywords"
+          content="contact TopDrain, water engineering Kenya, drainage company, plumbing, Nairobi, TopDrain WaterWorks contact"
+        />
+        <meta name="author" content="TopDrain WaterWorks LTD" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Contact Us | TopDrain WaterWorks LTD" />
+        <meta
+          property="og:description"
+          content="Reach out to TopDrain WaterWorks for expert plumbing, drainage, and water infrastructure services across Kenya."
+        />
+        <meta property="og:url" content="https://topdrainwaterworks.com/contact" />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact TopDrain WaterWorks" />
+        <meta
+          name="twitter:description"
+          content="Call, email, or visit our Nairobi office to get started with expert water solutions."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
+        <link rel="canonical" href="https://topdrainwaterworks.com/contact" />
+      </Helmet>
       <h2 className="text-center mb-4">Get in Touch</h2>
 
       <div className="row g-4">

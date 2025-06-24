@@ -29,13 +29,13 @@ export default function App() {
   }, []);
 
   return (
-    <div className="App">
-      {loading ? (
-        <LoadingSpinner />
-      ) : (
-        <Router>
-          <ScrollToTop />
-          <Header />
+    <Router>
+      <ScrollToTop />
+      <Header />
+      <main>
+        {loading ? (
+          <LoadingSpinner />
+        ) : (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -45,9 +45,9 @@ export default function App() {
             <Route path="/info" element={<InfoCentre />} />
             <Route path="/projects" element={<Projects />} />
           </Routes>
-          <Footer />
-        </Router>
-      )}
-    </div>
+        )}
+      </main>
+      <Footer />
+    </Router>
   );
 }

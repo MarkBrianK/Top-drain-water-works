@@ -2,10 +2,45 @@ import React from "react";
 import founder1 from "../Assets/Images/Victor.jpg";
 import founder2 from "../Assets/Images/Jason.jpg";
 import pipes from "../Assets/Images/pipes.jpg"
+import { Helmet } from "react-helmet";
 
 export default function About() {
   return (
     <div className="about-page">
+      <Helmet>
+        <title>About Us | TopDrain WaterWorks LTD</title>
+        <meta
+          name="description"
+          content="Learn about TopDrain WaterWorks LTD — a premier water systems engineering company in Kenya specializing in drainage, plumbing, sewer, and sustainable infrastructure solutions."
+        />
+        <meta
+          name="keywords"
+          content="TopDrain, About, Kenya water experts, drainage, sewer systems, plumbing, infrastructure"
+        />
+        <meta name="author" content="TopDrain WaterWorks LTD" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About Us | TopDrain WaterWorks LTD" />
+        <meta
+          property="og:description"
+          content="Meet the team behind Kenya's top water and drainage engineering company. Learn more about our mission, values, and founders."
+        />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content="https://topdrainwaterworks.com/about" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us | TopDrain WaterWorks LTD" />
+        <meta
+          name="twitter:description"
+          content="We design and deliver top-notch water systems across Kenya. Get to know the people behind TopDrain WaterWorks."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
+        <meta name="twitter:site" content="@_topdrain" />
+        <meta name="twitter:creator" content="@_topdrain" />
+        <link rel="canonical" href="https://topdrainwaterworks.com/about" />
+      </Helmet>
       <section
         className="text-white text-center py-5"
         style={{
@@ -23,7 +58,7 @@ export default function About() {
       >
         <div className="container">
           <h1 className="fw-semibold display-5 mb-2">
-             <span  style={{ color: "rgba(208, 212, 216, 0.9)" }}>TopDrain WaterWorks LTD</span>
+            <span style={{ color: "rgba(208, 212, 216, 0.9)" }}>TopDrain WaterWorks LTD</span>
           </h1>
           <p className="lead fw-light" style={{ fontStyle: "italic", opacity: 0.9 }}>
             Flowing Solutions, Lasting Excellence!

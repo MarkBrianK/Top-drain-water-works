@@ -3,6 +3,7 @@ import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
 import { auto } from "@cloudinary/url-gen/qualifiers/format";
 import { auto as qualityAuto } from "@cloudinary/url-gen/qualifiers/quality";
+import { Helmet } from "react-helmet";
 
 import data from "../Data/projects.json";
 
@@ -93,6 +94,38 @@ export default function Projects() {
 
   return (
     <div className="container py-5">
+      <Helmet>
+        <title>Our Projects | TopDrain WaterWorks LTD</title>
+        <meta
+          name="description"
+          content="Explore TopDrain WaterWorks’ completed drainage, sewer, and plumbing projects across Kenya. Visual proof of sustainable water infrastructure solutions."
+        />
+        <meta
+          name="keywords"
+          content="TopDrain projects, plumbing Kenya, sewer systems, drainage installation, flood control, infrastructure projects Kenya"
+        />
+        <meta name="author" content="TopDrain WaterWorks LTD" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Projects | TopDrain WaterWorks LTD" />
+        <meta
+          property="og:description"
+          content="View our completed infrastructure and water management projects across Kenya."
+        />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content="https://topdrainwaterworks.com/projects" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TopDrain Projects Showcase" />
+        <meta
+          name="twitter:description"
+          content="Reliable drainage, sewer, and plumbing projects across Kenya."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
+        <link rel="canonical" href="https://topdrainwaterworks.com/projects" />
+      </Helmet>
       <h2 className="fw-semibold text-center mb-4">Our Projects</h2>
 
       <div className="row g-4">

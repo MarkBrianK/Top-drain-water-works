@@ -1,8 +1,41 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 export default function InformationCentre() {
   return (
     <div className="container py-5">
+      <Helmet>
+        <title>Information Centre | TopDrain WaterWorks LTD</title>
+        <meta
+          name="description"
+          content="Stay updated with TopDrain WaterWorks' latest plumbing and drainage projects, community stories, and maintenance tips across Kenya."
+        />
+        <meta
+          name="keywords"
+          content="TopDrain updates, plumbing news Kenya, drainage projects, water infrastructure, Lavington, Nyeri, Kirinyaga"
+        />
+        <meta name="author" content="TopDrain WaterWorks LTD" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Information Centre | TopDrain WaterWorks LTD" />
+        <meta
+          property="og:description"
+          content="See our recent water and sewer system projects, cleaning services, solar water heater repairs, and more."
+        />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content="https://topdrainwaterworks.com/info" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TopDrain Information Centre" />
+        <meta
+          name="twitter:description"
+          content="Get plumbing tips and see our latest project highlights around Kenya."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
+        <link rel="canonical" href="https://topdrainwaterworks.com/info" />
+      </Helmet>
       <h2 className="fw-bold text-center mb-4">Information Centre</h2>
       <p className="text-center mb-5">
         Get updates on recent projects, service tips, and community impact stories from TopDrain WaterWorks LTD.
