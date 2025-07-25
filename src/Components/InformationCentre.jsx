@@ -2,6 +2,23 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 export default function InformationCentre() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Information Centre | TopDrain WaterWorks LTD",
+    "url": "https://www.topdrainlimited.com/info",
+    "image": "https://www.topdrainlimited.com/Assets/Images/logo.png",
+    "description": "Stay updated with TopDrain WaterWorks' latest plumbing and drainage projects, community stories, and maintenance tips across Kenya.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TopDrain Water Works LTD",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.topdrainlimited.com/Assets/Images/logo.png"
+      }
+    }
+  };
+
   return (
     <div className="container py-5">
       <Helmet>
@@ -15,6 +32,7 @@ export default function InformationCentre() {
           content="TopDrain updates, plumbing news Kenya, drainage projects, water infrastructure, Lavington, Nyeri, Kirinyaga"
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 
         {/* Open Graph */}
         <meta property="og:title" content="Information Centre | TopDrain WaterWorks LTD" />

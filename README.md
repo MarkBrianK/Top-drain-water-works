@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## SEO Improvements (2024)
+
+- **Sitemap.xml**: Added `public/sitemap.xml` listing all main routes for better search engine discovery.
+- **Meta Tags**: Each page uses `react-helmet` for dynamic meta tags (title, description, Open Graph, Twitter).
+- **robots.txt**: Allows all search engines to crawl the site.
+- **Recommendations**:
+  - For best SEO, consider using [Next.js](https://nextjs.org/) or a static pre-rendering tool like [react-snap](https://github.com/stereobooster/react-snap) to generate static HTML for each route.
+  - Register your site with [Google Search Console](https://search.google.com/search-console/about) and submit your sitemap.
+  - Add structured data (JSON-LD) for enhanced search results.
+
+---

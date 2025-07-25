@@ -10,12 +10,31 @@ import { auto as qualityAuto } from "@cloudinary/url-gen/qualifiers/quality";
 
 const cld = new Cloudinary({ cloud: { cloudName: "deqzkva98" } });
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TopDrain Water Works LTD",
+  "image": "https://www.topdrainlimited.com/Assets/Images/logo.png",
+  "url": "https://www.topdrainlimited.com/",
+  "telephone": "+254 702 263 360",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Nairobi, Kenya",
+    "addressLocality": "Nairobi",
+    "addressRegion": "Nairobi",
+    "postalCode": "",
+    "addressCountry": "KE"
+  },
+  "description": "TopDrain Water Works LTD provides reliable solutions for flood control, plumbing, sewer systems, and water supply across Kenya."
+};
+
 export default function Home() {
   return (
     <main className="container py-5">
       <Helmet>
         <title>TopDrain Water Works LTD | Home</title>
         <meta name="description" content="TopDrain Water Works LTD is a leading water and civil engineering company offering sustainable solutions in Kenya and beyond." />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <section className="mb-5">

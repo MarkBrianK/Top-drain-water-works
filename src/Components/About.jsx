@@ -5,6 +5,25 @@ import pipes from "../Assets/Images/pipes.jpg"
 import { Helmet } from "react-helmet";
 
 export default function About() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TopDrain Water Works LTD",
+    "url": "https://www.topdrainlimited.com/",
+    "logo": "https://www.topdrainlimited.com/Assets/Images/logo.png",
+    "description": "Learn about TopDrain WaterWorks LTD — a premier water systems engineering company in Kenya specializing in drainage, plumbing, sewer, and sustainable infrastructure solutions.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nairobi, Kenya",
+      "addressLocality": "Nairobi",
+      "addressRegion": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "sameAs": [
+      "https://www.topdrainlimited.com/"
+    ]
+  };
+
   return (
     <div className="about-page">
       <Helmet>
@@ -18,6 +37,7 @@ export default function About() {
           content="TopDrain, About, Kenya water experts, drainage, sewer systems, plumbing, infrastructure"
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 
         {/* Open Graph */}
         <meta property="og:title" content="About Us | TopDrain WaterWorks LTD" />

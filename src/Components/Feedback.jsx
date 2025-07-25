@@ -2,6 +2,23 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 export default function Feedback() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Feedback | TopDrain WaterWorks LTD",
+    "url": "https://www.topdrainlimited.com/feedback",
+    "image": "https://www.topdrainlimited.com/Assets/Images/logo.png",
+    "description": "We value your feedback at TopDrain WaterWorks LTD. Share your experience and help us improve our water and drainage services across Kenya.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TopDrain Water Works LTD",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.topdrainlimited.com/Assets/Images/logo.png"
+      }
+    }
+  };
+
   return (
     <div className="container py-5">
       <Helmet>
@@ -15,6 +32,7 @@ export default function Feedback() {
           content="TopDrain feedback, customer reviews, water services Kenya, drainage service feedback"
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 
         {/* Open Graph */}
         <meta property="og:title" content="Feedback | TopDrain WaterWorks LTD" />

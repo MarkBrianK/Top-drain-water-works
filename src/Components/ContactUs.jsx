@@ -3,6 +3,29 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
 export default function ContactUs() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TopDrain Water Works LTD",
+    "image": "https://www.topdrainlimited.com/Assets/Images/logo.png",
+    "url": "https://www.topdrainlimited.com/contact",
+    "telephone": "+254 702 263 360",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nairobi, Kenya",
+      "addressLocality": "Nairobi",
+      "addressRegion": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+254 702 263 360",
+      "contactType": "customer service",
+      "email": "info@topdrainlimited.com"
+    },
+    "description": "Need expert water or drainage solutions in Kenya? Contact TopDrain WaterWorks LTD today via phone, email, or visit us in Nairobi."
+  };
+
   return (
     <div className="container py-5">
       <Helmet>
@@ -16,6 +39,7 @@ export default function ContactUs() {
           content="contact TopDrain, water engineering Kenya, drainage company, plumbing, Nairobi, TopDrain WaterWorks contact"
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 
         {/* Open Graph */}
         <meta property="og:title" content="Contact Us | TopDrain WaterWorks LTD" />

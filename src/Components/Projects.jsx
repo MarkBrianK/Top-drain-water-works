@@ -13,6 +13,23 @@ const cld = new Cloudinary({
   },
 });
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Our Projects | TopDrain WaterWorks LTD",
+  "url": "https://www.topdrainlimited.com/projects",
+  "image": "https://www.topdrainlimited.com/Assets/Images/logo.png",
+  "description": "Explore TopDrain WaterWorks’ completed drainage, sewer, and plumbing projects across Kenya. Visual proof of sustainable water infrastructure solutions.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TopDrain Water Works LTD",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.topdrainlimited.com/Assets/Images/logo.png"
+    }
+  }
+};
+
 export default function Projects() {
   const carouselRefs = useRef([]);
 
@@ -105,7 +122,7 @@ export default function Projects() {
           content="TopDrain projects, plumbing Kenya, sewer systems, drainage installation, flood control, infrastructure projects Kenya"
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
-
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         {/* Open Graph */}
         <meta property="og:title" content="Projects | TopDrain WaterWorks LTD" />
         <meta

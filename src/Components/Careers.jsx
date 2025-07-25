@@ -2,6 +2,30 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 export default function Careers() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "title": "Plumbing Technicians, Trench Diggers, Materials Runners",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "TopDrain Water Works LTD",
+      "logo": "https://www.topdrainlimited.com/Assets/Images/logo.png"
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nairobi, Kenya",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Nairobi",
+        "addressCountry": "KE"
+      }
+    },
+    "description": "Join TopDrain WaterWorks LTD — we're hiring plumbers, diggers, and materials runners for short-term water and drainage projects across Kenya.",
+    "employmentType": "CONTRACT",
+    "datePosted": "2025-07-25"
+  };
+
   return (
     <div className="container py-5">
       <Helmet>
@@ -12,6 +36,7 @@ export default function Careers() {
         />
         <meta name="keywords" content="TopDrain careers, plumbing jobs Kenya, water projects, casual labor, civil works" />
         <meta name="author" content="TopDrain WaterWorks LTD" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <meta property="og:title" content="Careers | TopDrain WaterWorks LTD" />
         <meta
           property="og:description"
