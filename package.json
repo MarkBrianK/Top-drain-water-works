@@ -25,18 +25,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "next lint"
   },
   "devDependencies": {
     "puppeteer": "^24.15.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -49,6 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://markbriank.github.io/Top-drain-water-works"
+  }
 }

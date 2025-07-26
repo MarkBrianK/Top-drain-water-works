@@ -1,6 +1,6 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -28,7 +28,7 @@ const jsonLd = {
 export default function Contact() {
   return (
     <div className="container py-5">
-      <Helmet>
+      <Head>
         <title>Contact Us | TopDrain WaterWorks LTD</title>
         <meta
           name="description"
@@ -40,7 +40,7 @@ export default function Contact() {
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      </Head>
       <h2 className="text-center mb-4">Get in Touch</h2>
       <div className="row g-4">
         {/* Contact Info */}

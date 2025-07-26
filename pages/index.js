@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 import servicesData from "../src/Data/services.json";
 import carouselImages from "../src/Data/carouselImages.json";
 import { Cloudinary } from "@cloudinary/url-gen";
@@ -25,17 +25,31 @@ const jsonLd = {
     "postalCode": "",
     "addressCountry": "KE"
   },
-  "description": "TopDrain Water Works LTD provides reliable solutions for flood control, plumbing, sewer systems, and water supply across Kenya."
+  "description": "TopDrain WaterWorks LTD is Kenya's trusted water and drainage engineering company. We deliver sustainable plumbing, drainage, and sewer solutions for homes, businesses, and communities.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+254 702 263 360",
+    "contactType": "customer service",
+    "email": "info@topdrainlimited.com"
+  }
 };
 
 export default function Home() {
   return (
     <main className="container py-5">
-      <Helmet>
+      <Head>
         <title>TopDrain Water Works LTD | Home</title>
-        <meta name="description" content="TopDrain Water Works LTD is a leading water and civil engineering company offering sustainable solutions in Kenya and beyond." />
+        <meta
+          name="description"
+          content="TopDrain WaterWorks LTD is Kenya's trusted water and drainage engineering company. We deliver sustainable plumbing, drainage, and sewer solutions for homes, businesses, and communities."
+        />
+        <meta
+          name="keywords"
+          content="TopDrain, water engineering Kenya, drainage, plumbing, sewer, Nairobi, water company"
+        />
+        <meta name="author" content="TopDrain WaterWorks LTD" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      </Head>
 
       <section className="mb-5">
         <div id="imageCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">

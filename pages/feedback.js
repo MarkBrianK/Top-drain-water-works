@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -21,7 +21,7 @@ const jsonLd = {
 export default function Feedback() {
   return (
     <div className="container py-5">
-      <Helmet>
+      <Head>
         <title>Feedback | TopDrain WaterWorks LTD</title>
         <meta
           name="description"
@@ -33,7 +33,7 @@ export default function Feedback() {
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      </Head>
       <h1 className="fw-bold text-center mb-4">We Value Your Feedback</h1>
       <p className="text-center mb-4">
         Your thoughts help us improve our services. Please share your experience with TopDrain WaterWorks LTD.

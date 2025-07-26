@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -28,7 +28,7 @@ const jsonLd = {
 export default function Careers() {
   return (
     <div className="container py-5">
-      <Helmet>
+      <Head>
         <title>Careers | TopDrain WaterWorks LTD</title>
         <meta
           name="description"
@@ -37,7 +37,7 @@ export default function Careers() {
         <meta name="keywords" content="TopDrain careers, plumbing jobs Kenya, water projects, casual labor, civil works" />
         <meta name="author" content="TopDrain WaterWorks LTD" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      </Head>
       <h1 className="fw-bold text-center mb-4">Work With Us</h1>
       <p className="text-center mb-4">
         TopDrain WaterWorks LTD regularly engages skilled and semi-skilled casual workers for short-term plumbing and civil works projects across Kenya.

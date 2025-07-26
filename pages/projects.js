@@ -3,7 +3,7 @@ import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
 import { auto } from "@cloudinary/url-gen/qualifiers/format";
 import { auto as qualityAuto } from "@cloudinary/url-gen/qualifiers/quality";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 import data from "../src/Data/projects.json";
 
 const cld = new Cloudinary({
@@ -97,7 +97,7 @@ export default function Projects() {
 
   return (
     <div className="container py-5">
-      <Helmet>
+      <Head>
         <title>Our Projects | TopDrain WaterWorks LTD</title>
         <meta
           name="description"
@@ -109,7 +109,7 @@ export default function Projects() {
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
+      </Head>
       <h2 className="fw-semibold text-center mb-4">Our Projects</h2>
       <div className="row g-4">
         {data.map((project, index) => (
