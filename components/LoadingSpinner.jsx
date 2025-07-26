@@ -1,0 +1,53 @@
+import React from "react";
+
+export default function LoadingSpinner() {
+  return (
+    <div className="loading-spinner">
+      <div className="dot-spinner">
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+        <div className="dot"></div>
+      </div>
+      <style jsx>{`
+        .loading-spinner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 60vh;
+        }
+
+        .dot-spinner {
+          position: relative;
+          width: 60px;
+          height: 60px;
+        }
+
+        .dot {
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background-color: #0c5674;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform-origin: -20px 0;
+          animation: spinDot 1s linear infinite;
+        }
+
+        .dot:nth-child(2) { animation-delay: 0.15s; }
+        .dot:nth-child(3) { animation-delay: 0.3s; }
+        .dot:nth-child(4) { animation-delay: 0.45s; }
+        .dot:nth-child(5) { animation-delay: 0.6s; }
+        .dot:nth-child(6) { animation-delay: 0.75s; }
+
+        @keyframes spinDot {
+          0%   { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
+    </div>
+  );
+}
