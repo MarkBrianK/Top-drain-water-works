@@ -11,49 +11,26 @@
     "@testing-library/user-event": "^13.5.0",
     "@vercel/analytics": "^1.5.0",
     "bootstrap": "^5.3.5",
+    "bootstrap-icons": "^1.13.1",
     "lucide-react": "^0.503.0",
+    "next": "^15.4.4",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.1.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.5.3",
-    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "postbuild": "react-snap",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "puppeteer": "^24.15.0",
-    "react-snap": "^1.23.0"
-  },
-  "reactSnap": {
-    "inlineCss": false,
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-dev-shm-usage",
-      "--disable-accelerated-2d-canvas",
-      "--no-first-run",
-      "--no-zygote",
-      "--disable-gpu"
-    ],
-    "include": [
-      "/",
-      "/about",
-      "/careers",
-      "/contact",
-      "/feedback",
-      "/info",
-      "/projects"
-    ],
-    "skipThirdPartyRequests": true,
-    "removeBlobs": true
+    "puppeteer": "^24.15.0"
   },
   "eslintConfig": {
     "extends": [
@@ -72,5 +49,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://markbriank.github.io/Top-drain-water-works"
 }

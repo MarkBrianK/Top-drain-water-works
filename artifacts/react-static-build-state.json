@@ -1,0 +1,54 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "silent": false,
+  "entry": "index.js",
+  "paths": {
+    "ROOT": "C:\\Users\\kariu\\Documents\\Top-drain-water-works",
+    "SRC": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\src",
+    "DIST": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\dist",
+    "ASSETS": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\dist",
+    "PLUGINS": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\plugins",
+    "TEMP": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\tmp",
+    "ARTIFACTS": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\artifacts",
+    "PUBLIC": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\public",
+    "NODE_MODULES": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\node_modules",
+    "EXCLUDE_MODULES": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\node_modules",
+    "PACKAGE": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\package.json",
+    "HTML_TEMPLATE": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\dist\\index.html",
+    "STATIC_DATA": "C:\\Users\\kariu\\Documents\\Top-drain-water-works\\dist\\staticData"
+  },
+  "plugins": [
+    "C:\\Users\\kariu\\Documents\\Top-drain-water-works"
+  ],
+  "siteRoot": "/",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}

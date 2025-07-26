@@ -1,0 +1,87 @@
+import React from "react";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { Helmet } from "react-helmet";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TopDrain Water Works LTD",
+  "image": "/Assets/Images/logo.png",
+  "url": "https://www.topdrainlimited.com/contact",
+  "telephone": "+254 702 263 360",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Nairobi, Kenya",
+    "addressLocality": "Nairobi",
+    "addressRegion": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+254 702 263 360",
+    "contactType": "customer service",
+    "email": "info@topdrainlimited.com"
+  },
+  "description": "Need expert water or drainage solutions in Kenya? Contact TopDrain WaterWorks LTD today via phone, email, or visit us in Nairobi."
+};
+
+export default function Contact() {
+  return (
+    <div className="container py-5">
+      <Helmet>
+        <title>Contact Us | TopDrain WaterWorks LTD</title>
+        <meta
+          name="description"
+          content="Need expert water or drainage solutions in Kenya? Contact TopDrain WaterWorks LTD today via phone, email, or visit us in Nairobi."
+        />
+        <meta
+          name="keywords"
+          content="contact TopDrain, water engineering Kenya, drainage company, plumbing, Nairobi, TopDrain WaterWorks contact"
+        />
+        <meta name="author" content="TopDrain WaterWorks LTD" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
+      <h2 className="text-center mb-4">Get in Touch</h2>
+      <div className="row g-4">
+        {/* Contact Info */}
+        <div className="col-md-6">
+          <h5>Contact Information</h5>
+          <p><FaMapMarkerAlt className="me-2" /> Nairobi, Kenya</p>
+          <p><FaPhoneAlt className="me-2" /> +254 702 263 360</p>
+          <p><FaPhoneAlt className="me-2" /> +254 758 519 850</p>
+          <p><FaEnvelope className="me-2" /> info@topdrainlimited.com</p>
+          <div className="mt-4">
+            <iframe
+              title="TopDrain WaterWoks Location"
+              src="https://www.google.com/maps?q=-1.2991070901121253,36.799981844423876&hl=en&z=16&output=embed"
+              width="100%"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <div className="col-md-6">
+          <h5>Send Us a Message</h5>
+          <form>
+            <div className="mb-3">
+              <label className="form-label">Full Name</label>
+              <input type="text" className="form-control" placeholder="Enter your name" />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Email Address</label>
+              <input type="email" className="form-control" placeholder="Enter your email" />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Message</label>
+              <textarea className="form-control" rows="5" placeholder="Your message here..."></textarea>
+            </div>
+            <button type="submit" className="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+}
