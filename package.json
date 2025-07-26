@@ -29,12 +29,19 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "puppeteer": "^24.15.0",
     "react-snap": "^1.23.0"
   },
   "reactSnap": {
-    "inlineCss": true,
+    "inlineCss": false,
     "puppeteerArgs": [
-      "--no-sandbox"
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--disable-gpu"
     ],
     "include": [
       "/",
@@ -44,7 +51,9 @@
       "/feedback",
       "/info",
       "/projects"
-    ]
+    ],
+    "skipThirdPartyRequests": true,
+    "removeBlobs": true
   },
   "eslintConfig": {
     "extends": [
