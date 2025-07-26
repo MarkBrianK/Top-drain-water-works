@@ -25,14 +25,14 @@ function AppRoutes() {
   const location = useLocation();
   const navigationType = useNavigationType();
 
-  const [routeLoading, setRouteLoading] = useState(true);
+  const [routeLoading, setRouteLoading] = useState(false);
 
   useEffect(() => {
     setRouteLoading(true);
 
     const timer = setTimeout(() => {
       setRouteLoading(false);
-    }, 3000); // short delay to simulate loading
+    }, 500); // Reduced from 3000ms to 500ms for faster loading
 
     return () => clearTimeout(timer);
   }, [location, navigationType]);
@@ -60,8 +60,17 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setInitialLoading(false);
-    }, 2000); // initial load spinner (visible 1s)
-    return () => clearTimeout(timer);
+    }, 1000); // Reduced from 2000ms to 1000ms for faster initial load
+
+    // Fallback to ensure loading doesn't get stuck
+    const fallbackTimer = setTimeout(() => {
+      setInitialLoading(false);
+    }, 5000); // Force stop loading after 5 seconds
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   return (
