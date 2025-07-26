@@ -3,16 +3,27 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import LoadingSpinner from '../components/LoadingSpinner'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
+  const loadingTimer = useRef(null)
+  const minDelay = 3000
 
   useEffect(() => {
-    const handleStart = () => setLoading(true)
-    const handleComplete = () => setLoading(false)
+    const handleStart = () => {
+      setLoading(true)
+      if (loadingTimer.current) clearTimeout(loadingTimer.current)
+      loadingTimer.current = null
+    }
+    const handleComplete = () => {
+      if (loadingTimer.current) clearTimeout(loadingTimer.current)
+      loadingTimer.current = setTimeout(() => {
+        setLoading(false)
+      }, minDelay)
+    }
 
     router.events.on('routeChangeStart', handleStart)
     router.events.on('routeChangeComplete', handleComplete)
@@ -22,6 +33,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off('routeChangeStart', handleStart)
       router.events.off('routeChangeComplete', handleComplete)
       router.events.off('routeChangeError', handleComplete)
+      if (loadingTimer.current) clearTimeout(loadingTimer.current)
     }
   }, [router])
 
