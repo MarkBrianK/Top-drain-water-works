@@ -73,7 +73,7 @@ export default function Header() {
           <Nav>
             {navItems.map((item) => (
               item.dropdown ? (
-                <Nav.Item key={item.name} className="mx-2 position-relative">
+                <Nav.Item key={item.name} className="mx-2 position-relative"  style={{textDecoration:"none"}}>
                   <Nav.Link className="fw-semibold desktop-link dropdown-toggle" role="button" style={{ textDecoration: 'none' }}>
                     {item.name}
                   </Nav.Link>
