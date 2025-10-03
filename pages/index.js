@@ -106,13 +106,29 @@ export default function Home() {
       {/* Services Section */}
       <section>
         <div className="text-center mb-5">
-          <h1 className="fw-semibold mb-3">
-            Professional Drainage & Plumbing Services in Nairobi, Kenya
-          </h1>
-          <p className="lead text-muted">
-            Expert water solutions for homes, businesses, and communities across Kenya.
-            Emergency plumbing services available 24/7.
-          </p>
+          <div className="hero-section p-5 rounded-4 mb-4" style={{
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            color: 'white',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+          }}>
+            <h1 className="fw-bold mb-4 display-5">
+              Professional Drainage & Plumbing Services in Nairobi, Kenya
+            </h1>
+            <p className="lead mb-4 fs-5">
+              Expert water solutions for homes, businesses, and communities across Kenya.
+              Emergency plumbing services available 24/7.
+            </p>
+            <div className="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="tel:+254702263360" className="btn btn-light btn-lg px-4 py-3 rounded-pill shadow-sm">
+                <i className="bi bi-telephone me-2"></i>
+                Call Now: +254 702 263 360
+              </a>
+              <a href="/contact" className="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
+                <i className="bi bi-envelope me-2"></i>
+                Get Quote
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -127,28 +143,57 @@ export default function Home() {
               <div className="col" key={index}>
                 <a href={service.link} className="text-decoration-none">
                   <div
-                    className="card h-100 shadow-sm border-0"
+                    className="card h-100 border-0 service-card"
                     style={{
-                      transition: "transform 0.3s, box-shadow 0.3s",
+                      transition: "all 0.4s ease",
                       cursor: "pointer",
+                      borderRadius: "20px",
+                      overflow: "hidden",
+                      background: "linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)",
+                      boxShadow: "0 8px 25px rgba(0,0,0,0.08)"
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "scale(1.03)";
-                      e.currentTarget.style.boxShadow = "0 0.5rem 1rem rgba(0,0,0,0.15)";
+                      e.currentTarget.style.transform = "translateY(-10px) scale(1.02)";
+                      e.currentTarget.style.boxShadow = "0 20px 40px rgba(0,0,0,0.15)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "scale(1)";
-                      e.currentTarget.style.boxShadow = "0 .125rem .25rem rgba(0,0,0,.075)";
+                      e.currentTarget.style.transform = "translateY(0) scale(1)";
+                      e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.08)";
                     }}
                   >
-                    <AdvancedImage
-                      cldImg={cldImage}
-                      className="card-img-top"
-                      style={{ height: "200px", objectFit: "cover" }}
-                    />
-                    <div className="card-body">
-                      <h5 className="card-title fw-bold">{service.title}</h5>
-                      <p className="card-text">{service.desc}</p>
+                    <div className="position-relative">
+                      <AdvancedImage
+                        cldImg={cldImage}
+                        className="card-img-top"
+                        style={{ height: "220px", objectFit: "cover" }}
+                      />
+                      <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+                           style={{
+                             background: "linear-gradient(45deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9))",
+                             opacity: 0,
+                             transition: "opacity 0.3s ease"
+                           }}
+                           onMouseEnter={(e) => {
+                             e.currentTarget.style.opacity = "1";
+                           }}
+                           onMouseLeave={(e) => {
+                             e.currentTarget.style.opacity = "0";
+                           }}
+                      >
+                        <span className="text-white fw-bold fs-5">
+                          <i className="bi bi-arrow-right-circle me-2"></i>
+                          Learn More
+                        </span>
+                      </div>
+                    </div>
+                    <div className="card-body p-4">
+                      <h5 className="card-title fw-bold mb-3 text-primary">{service.title}</h5>
+                      <p className="card-text text-muted">{service.desc}</p>
+                      <div className="mt-3">
+                        <small className="text-primary fw-semibold">
+                          Click to learn more <i className="bi bi-arrow-right ms-1"></i>
+                        </small>
+                      </div>
                     </div>
                   </div>
                 </a>
@@ -159,57 +204,169 @@ export default function Home() {
       </section>
 
       {/* Emergency Contact Section */}
-      <section className="mt-5 py-4 bg-light rounded">
-        <div className="row align-items-center">
-          <div className="col-md-8">
-            <h2 className="h4 mb-2">Need Emergency Plumbing Services in Nairobi?</h2>
-            <p className="mb-0 text-muted">
-              Blocked drains, burst pipes, or water leaks? Our expert plumbers are available 24/7 across Nairobi and surrounding areas.
-            </p>
-          </div>
-          <div className="col-md-4 text-md-end">
-            <a href="tel:+254702263360" className="btn btn-danger btn-lg">
-              <i className="bi bi-telephone me-2"></i>
-              Call Now: +254 702 263 360
-            </a>
+      <section className="mt-5">
+        <div className="emergency-section p-5 rounded-4" style={{
+          background: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)',
+          color: 'white',
+          boxShadow: '0 15px 35px rgba(255, 107, 107, 0.3)'
+        }}>
+          <div className="row align-items-center">
+            <div className="col-md-8">
+              <div className="d-flex align-items-center mb-3">
+                <div className="emergency-icon me-3" style={{
+                  width: '60px',
+                  height: '60px',
+                  background: 'rgba(255,255,255,0.2)',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <i className="bi bi-telephone fs-2"></i>
+                </div>
+                <div>
+                  <h2 className="h3 mb-1 fw-bold">Emergency Plumbing Services</h2>
+                  <p className="mb-0 opacity-90">Available 24/7 in Nairobi & Surrounding Areas</p>
+                </div>
+              </div>
+              <p className="mb-0 fs-5">
+                Blocked drains, burst pipes, or water leaks? Our expert plumbers are ready to help you immediately.
+              </p>
+            </div>
+            <div className="col-md-4 text-md-end mt-3 mt-md-0">
+              <a href="tel:+254702263360"
+                 className="btn btn-light btn-lg px-5 py-3 rounded-pill shadow-lg"
+                 style={{
+                   background: 'white',
+                   color: '#ee5a24',
+                   fontWeight: 'bold',
+                   fontSize: '1.1rem',
+                   transition: 'all 0.3s ease'
+                 }}
+                 onMouseEnter={(e) => {
+                   e.currentTarget.style.transform = 'scale(1.05)';
+                   e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+                 }}
+                 onMouseLeave={(e) => {
+                   e.currentTarget.style.transform = 'scale(1)';
+                   e.currentTarget.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                 }}
+              >
+                <i className="bi bi-telephone me-2"></i>
+                Call Now: +254 702 263 360
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Service Areas Section */}
       <section className="mt-5">
-        <h2 className="h4 mb-3">We Serve All Areas in Nairobi and Kenya</h2>
-        <div className="row">
+        <div className="text-center mb-5">
+          <h2 className="h3 mb-3 fw-bold">We Serve All Areas in Nairobi and Kenya</h2>
+          <p className="text-muted fs-5">Professional plumbing and drainage services across the country</p>
+        </div>
+        <div className="row g-4">
           <div className="col-md-3">
-            <h6>Nairobi Central</h6>
-            <ul className="list-unstyled small text-muted">
-              <li>CBD • Westlands • Kilimani • Karen</li>
-              <li>Runda • Lavington • Muthaiga • Kileleshwa</li>
-            </ul>
+            <div className="service-area-card p-4 h-100 rounded-3" style={{
+              background: 'linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%)',
+              border: '1px solid #dee2e6',
+              transition: 'all 0.3s ease'
+            }}>
+              <div className="text-center mb-3">
+                <i className="bi bi-building text-primary fs-1"></i>
+              </div>
+              <h6 className="fw-bold text-primary mb-3">Nairobi Central</h6>
+              <ul className="list-unstyled small text-muted mb-0">
+                <li className="mb-1">CBD • Westlands • Kilimani</li>
+                <li className="mb-1">Karen • Runda • Lavington</li>
+                <li className="mb-1">Muthaiga • Kileleshwa</li>
+              </ul>
+            </div>
           </div>
           <div className="col-md-3">
-            <h6>East Nairobi</h6>
-            <ul className="list-unstyled small text-muted">
-              <li>Eastleigh • South B • South C • Embakasi</li>
-              <li>Umoja • Donholm • Pipeline • Kayole</li>
-            </ul>
+            <div className="service-area-card p-4 h-100 rounded-3" style={{
+              background: 'linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%)',
+              border: '1px solid #dee2e6',
+              transition: 'all 0.3s ease'
+            }}>
+              <div className="text-center mb-3">
+                <i className="bi bi-geo-alt text-success fs-1"></i>
+              </div>
+              <h6 className="fw-bold text-success mb-3">East Nairobi</h6>
+              <ul className="list-unstyled small text-muted mb-0">
+                <li className="mb-1">Eastleigh • South B • South C</li>
+                <li className="mb-1">Embakasi • Umoja • Donholm</li>
+                <li className="mb-1">Pipeline • Kayole</li>
+              </ul>
+            </div>
           </div>
           <div className="col-md-3">
-            <h6>North Nairobi</h6>
-            <ul className="list-unstyled small text-muted">
-              <li>Kasarani • Ruaraka • Kahawa • Thika Road</li>
-              <li>Kiambu • Thika • Ruiru • Juja</li>
-            </ul>
+            <div className="service-area-card p-4 h-100 rounded-3" style={{
+              background: 'linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%)',
+              border: '1px solid #dee2e6',
+              transition: 'all 0.3s ease'
+            }}>
+              <div className="text-center mb-3">
+                <i className="bi bi-compass text-warning fs-1"></i>
+              </div>
+              <h6 className="fw-bold text-warning mb-3">North Nairobi</h6>
+              <ul className="list-unstyled small text-muted mb-0">
+                <li className="mb-1">Kasarani • Ruaraka • Kahawa</li>
+                <li className="mb-1">Thika Road • Kiambu • Thika</li>
+                <li className="mb-1">Ruiru • Juja</li>
+              </ul>
+            </div>
           </div>
           <div className="col-md-3">
-            <h6>Other Counties</h6>
-            <ul className="list-unstyled small text-muted">
-              <li>Mombasa • Kisumu • Nakuru • Eldoret</li>
-              <li>Nyeri • Kirinyaga • Machakos • Kajiado</li>
-            </ul>
+            <div className="service-area-card p-4 h-100 rounded-3" style={{
+              background: 'linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%)',
+              border: '1px solid #dee2e6',
+              transition: 'all 0.3s ease'
+            }}>
+              <div className="text-center mb-3">
+                <i className="bi bi-globe text-info fs-1"></i>
+              </div>
+              <h6 className="fw-bold text-info mb-3">Other Counties</h6>
+              <ul className="list-unstyled small text-muted mb-0">
+                <li className="mb-1">Mombasa • Kisumu • Nakuru</li>
+                <li className="mb-1">Eldoret • Nyeri • Kirinyaga</li>
+                <li className="mb-1">Machakos • Kajiado</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
+      <style jsx>{`
+        .service-area-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+        }
+
+        .hero-section {
+          animation: fadeInUp 1s ease-out;
+        }
+
+        .emergency-section {
+          animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .service-card:hover .card-img-top {
+          transform: scale(1.1);
+          transition: transform 0.4s ease;
+        }
+      `}</style>
     </main>
   );
 }

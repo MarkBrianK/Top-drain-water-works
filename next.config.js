@@ -9,6 +9,12 @@ const nextConfig = {
       },
     ],
   },
+  // Fix for Windows build cache issues
+  experimental: {
+    esmExternals: false,
+  },
+  // Disable some optimizations that cause issues on Windows
+  swcMinify: false,
 }
 
 module.exports = nextConfig

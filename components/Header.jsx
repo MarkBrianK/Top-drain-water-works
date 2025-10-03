@@ -32,7 +32,11 @@ export default function Header() {
   ];
 
   return (
-    <Navbar expand="md" className="shadow-sm bg-light py-3" sticky="top">
+    <Navbar expand="md" className="shadow-lg py-3" sticky="top" style={{
+      background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)',
+      backdropFilter: 'blur(10px)',
+      borderBottom: '1px solid rgba(0,0,0,0.05)'
+    }}>
       <Container fluid className="px-3">
         {/* Logo */}
         <Navbar.Brand as={Link} href="/" className="d-flex align-items-center">
@@ -210,31 +214,49 @@ export default function Header() {
         .dropdown-menu {
           display: none;
           position: absolute;
-          background-color: white;
-          min-width: 200px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+          min-width: 220px;
+          box-shadow: 0 15px 35px rgba(0,0,0,0.1);
           z-index: 1000;
-          border-radius: 8px;
-          padding: 8px 0;
-          margin-top: 5px;
+          border-radius: 15px;
+          padding: 12px 0;
+          margin-top: 10px;
+          border: 1px solid rgba(0,0,0,0.05);
+          backdrop-filter: blur(10px);
         }
 
         .dropdown-toggle:hover + .dropdown-menu,
         .dropdown-menu:hover {
           display: block;
+          animation: fadeInDown 0.3s ease;
+        }
+
+        @keyframes fadeInDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         .dropdown-item {
           color: #004080;
-          padding: 8px 16px;
+          padding: 12px 20px;
           text-decoration: none;
           display: block;
-          transition: background-color 0.2s ease;
+          transition: all 0.3s ease;
+          border-radius: 8px;
+          margin: 2px 8px;
+          font-weight: 500;
         }
 
         .dropdown-item:hover {
-          background-color: #f8f9fa;
-          color: #007bff;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          transform: translateX(5px);
         }
       `}</style>
     </Navbar>
