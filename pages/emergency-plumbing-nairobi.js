@@ -41,69 +41,140 @@ export default function EmergencyPlumbingNairobi() {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Head>
 
-      <h1 className="fw-bold text-center mb-4">Emergency Plumbing Services in Nairobi Kenya</h1>
-      <p className="text-center mb-5 lead">
-        Available 24/7 for urgent plumbing emergencies across Nairobi. Fast response, professional service, competitive pricing.
-      </p>
+      {/* Hero Section */}
+      <div className="hero-section mb-5 p-5 rounded-4" style={{
+        background: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)',
+        color: 'white',
+        boxShadow: '0 15px 35px rgba(255, 107, 107, 0.3)'
+      }}>
+        <div className="text-center">
+          <h1 className="fw-bold mb-3 display-5">Emergency Plumbing Services in Nairobi Kenya</h1>
+          <p className="lead fs-4 mb-4">
+            Available 24/7 for urgent plumbing emergencies across Nairobi. Fast response, professional service, competitive pricing.
+          </p>
+          <div className="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="tel:+254702263360" className="btn btn-light btn-lg px-5 py-3 rounded-pill shadow-lg">
+              <i className="bi bi-telephone me-2"></i>
+              Emergency Call: +254 702 263 360
+            </a>
+            <a href="/contact" className="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
+              Get Quote
+            </a>
+          </div>
+        </div>
+      </div>
 
       <div className="row mb-5">
         <div className="col-lg-8">
           <h2>Common Emergency Plumbing Issues We Fix</h2>
 
-          <div className="row mb-4">
-            <div className="col-md-6">
-              <div className="card h-100">
-                <div className="card-body">
-                  <h5 className="card-title">🚰 Burst Pipe Repair</h5>
-                  <p className="card-text">Emergency pipe repairs for burst or leaking pipes. We respond quickly to minimize water damage to your property.</p>
-                  <ul className="small">
-                    <li>Hot and cold water pipes</li>
-                    <li>Main water line repairs</li>
-                    <li>Pipe replacement services</li>
-                  </ul>
+          <div className="row mb-5">
+            <div className="col-md-6 mb-4">
+              <div className="emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
+                background: 'linear-gradient(145deg, #fff5f5 0%, #fef2f2 100%)',
+                border: '2px solid #fecaca'
+              }}>
+                <div className="text-center mb-3">
+                  <div className="emergency-icon mx-auto mb-3" style={{
+                    width: '80px',
+                    height: '80px',
+                    background: 'linear-gradient(135deg, #ff6b6b, #ee5a24)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <span className="fs-1">🚰</span>
+                  </div>
+                  <h5 className="fw-bold text-danger">Burst Pipe Repair</h5>
                 </div>
+                <p className="text-muted text-center mb-3">Emergency pipe repairs for burst or leaking pipes. We respond quickly to minimize water damage to your property.</p>
+                <ul className="list-unstyled small">
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Hot and cold water pipes</li>
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Main water line repairs</li>
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Pipe replacement services</li>
+                </ul>
               </div>
             </div>
-            <div className="col-md-6">
-              <div className="card h-100">
-                <div className="card-body">
-                  <h5 className="card-title">🚿 Blocked Drain Emergency</h5>
-                  <p className="card-text">Severe drain blockages that cause flooding or complete stoppage. Professional drain cleaning and unblocking services.</p>
-                  <ul className="small">
-                    <li>Kitchen sink blockages</li>
-                    <li>Bathroom drain issues</li>
-                    <li>Sewer line blockages</li>
-                  </ul>
+            <div className="col-md-6 mb-4">
+              <div className="emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
+                background: 'linear-gradient(145deg, #f0f9ff 0%, #e0f2fe 100%)',
+                border: '2px solid #bae6fd'
+              }}>
+                <div className="text-center mb-3">
+                  <div className="emergency-icon mx-auto mb-3" style={{
+                    width: '80px',
+                    height: '80px',
+                    background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <span className="fs-1">🚿</span>
+                  </div>
+                  <h5 className="fw-bold text-primary">Blocked Drain Emergency</h5>
                 </div>
+                <p className="text-muted text-center mb-3">Severe drain blockages that cause flooding or complete stoppage. Professional drain cleaning and unblocking services.</p>
+                <ul className="list-unstyled small">
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Kitchen sink blockages</li>
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Bathroom drain issues</li>
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Sewer line blockages</li>
+                </ul>
               </div>
             </div>
-          </div>
-
-          <div className="row mb-4">
-            <div className="col-md-6">
-              <div className="card h-100">
-                <div className="card-body">
-                  <h5 className="card-title">🔥 Water Heater Emergency</h5>
-                  <p className="card-text">No hot water? Leaking water heater? We provide emergency water heater repair and replacement services.</p>
-                  <ul className="small">
-                    <li>Electric water heater repair</li>
-                    <li>Solar water heater issues</li>
-                    <li>Water heater installation</li>
-                  </ul>
+            <div className="col-md-6 mb-4">
+              <div className="emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
+                background: 'linear-gradient(145deg, #fff7ed 0%, #fed7aa 100%)',
+                border: '2px solid #fed7aa'
+              }}>
+                <div className="text-center mb-3">
+                  <div className="emergency-icon mx-auto mb-3" style={{
+                    width: '80px',
+                    height: '80px',
+                    background: 'linear-gradient(135deg, #f97316, #ea580c)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <span className="fs-1">🔥</span>
+                  </div>
+                  <h5 className="fw-bold text-warning">Water Heater Emergency</h5>
                 </div>
+                <p className="text-muted text-center mb-3">No hot water? Leaking water heater? We provide emergency water heater repair and replacement services.</p>
+                <ul className="list-unstyled small">
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Electric water heater repair</li>
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Solar water heater issues</li>
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Water heater installation</li>
+                </ul>
               </div>
             </div>
-            <div className="col-md-6">
-              <div className="card h-100">
-                <div className="card-body">
-                  <h5 className="card-title">💧 Water Tank Emergency</h5>
-                  <p className="card-text">Overflowing water tanks, leaks, or complete water system failures. Emergency tank repair and maintenance.</p>
-                  <ul className="small">
-                    <li>Overhead tank repairs</li>
-                    <li>Underground tank issues</li>
-                    <li>Water pump emergencies</li>
-                  </ul>
+            <div className="col-md-6 mb-4">
+              <div className="emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
+                background: 'linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%)',
+                border: '2px solid #bbf7d0'
+              }}>
+                <div className="text-center mb-3">
+                  <div className="emergency-icon mx-auto mb-3" style={{
+                    width: '80px',
+                    height: '80px',
+                    background: 'linear-gradient(135deg, #22c55e, #16a34a)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <span className="fs-1">💧</span>
+                  </div>
+                  <h5 className="fw-bold text-success">Water Tank Emergency</h5>
                 </div>
+                <p className="text-muted text-center mb-3">Overflowing water tanks, leaks, or complete water system failures. Emergency tank repair and maintenance.</p>
+                <ul className="list-unstyled small">
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Overhead tank repairs</li>
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Underground tank issues</li>
+                  <li className="mb-1"><i className="bi bi-check-circle text-success me-2"></i>Water pump emergencies</li>
+                </ul>
               </div>
             </div>
           </div>
