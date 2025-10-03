@@ -73,14 +73,14 @@ export default function Header() {
           <Nav>
             {navItems.map((item) => (
               item.dropdown ? (
-                <Nav.Item key={item.name} className="mx-2">
-                  <Nav.Link className="fw-semibold desktop-link dropdown-toggle" role="button">
+                <Nav.Item key={item.name} className="mx-2 position-relative">
+                  <Nav.Link className="fw-semibold desktop-link dropdown-toggle" role="button" style={{ textDecoration: 'none' }}>
                     {item.name}
                   </Nav.Link>
                   <div className="dropdown-menu">
                     {item.dropdown.map((dropdownItem) => (
                       <Link key={dropdownItem.path} href={dropdownItem.path}>
-                        <a className="dropdown-item">{dropdownItem.name}</a>
+                        <a className="dropdown-item" style={{ textDecoration: 'none' }}>{dropdownItem.name}</a>
                       </Link>
                     ))}
                   </div>
@@ -214,20 +214,23 @@ export default function Header() {
         .dropdown-menu {
           display: none;
           position: absolute;
+          top: 100%;
+          left: 0;
           background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
           min-width: 220px;
-          box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-          z-index: 1000;
+          box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+          z-index: 9999;
           border-radius: 15px;
           padding: 12px 0;
-          margin-top: 10px;
-          border: 1px solid rgba(0,0,0,0.05);
+          margin-top: 5px;
+          border: 1px solid rgba(0,0,0,0.1);
           backdrop-filter: blur(10px);
         }
 
         .dropdown-toggle:hover + .dropdown-menu,
-        .dropdown-menu:hover {
-          display: block;
+        .dropdown-menu:hover,
+        .dropdown-toggle:hover {
+          display: block !important;
           animation: fadeInDown 0.3s ease;
         }
 
