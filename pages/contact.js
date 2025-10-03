@@ -29,16 +29,18 @@ export default function Contact() {
   return (
     <div className="container py-5">
       <Head>
-        <title>Contact Us | TopDrain WaterWorks LTD</title>
+        <title>Contact TopDrain WaterWorks | Emergency Plumbing Services Nairobi Kenya</title>
         <meta
           name="description"
-          content="Need expert water or drainage solutions in Kenya? Contact TopDrain WaterWorks LTD today via phone, email, or visit us in Nairobi."
+          content="Need emergency plumbing or drainage services in Nairobi? Contact TopDrain WaterWorks LTD at +254 702 263 360. Expert sewer repair, drain cleaning, and water tank installation across Kenya."
         />
         <meta
           name="keywords"
-          content="contact TopDrain, water engineering Kenya, drainage company, plumbing, Nairobi, TopDrain WaterWorks contact"
+          content="contact TopDrain, emergency plumbing Nairobi, drainage services Kenya, sewer repair contact, plumber Nairobi phone, water tank installation Kenya, drain cleaning services"
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.topdrainlimited.com/contact" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Head>
       <h2 className="text-center mb-4">Get in Touch</h2>

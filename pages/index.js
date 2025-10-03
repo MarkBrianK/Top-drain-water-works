@@ -38,16 +38,18 @@ export default function Home() {
   return (
     <main className="container py-5">
       <Head>
-        <title>TopDrain Water Works LTD | Home</title>
+        <title>Drainage Services Nairobi | Plumbing & Sewer Works Kenya | TopDrain WaterWorks</title>
         <meta
           name="description"
-          content="TopDrain WaterWorks LTD is Kenya's trusted water and drainage engineering company. We deliver sustainable plumbing, drainage, and sewer solutions for homes, businesses, and communities."
+          content="Expert drainage services in Nairobi, Kenya. TopDrain WaterWorks provides plumbing, sewer repair, water heater installation, and flood control solutions. Call +254 702 263 360 for emergency plumbing services."
         />
         <meta
           name="keywords"
-          content="TopDrain, water engineering Kenya, drainage, plumbing, sewer, Nairobi, water company"
+          content="drainage services Nairobi, plumber Nairobi Kenya, sewer repair Nairobi, water heater installation Kenya, emergency plumbing Nairobi, drain cleaning Nairobi, flood control Kenya, water tank installation Nairobi"
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.topdrainlimited.com/" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Head>
 
@@ -104,17 +106,13 @@ export default function Home() {
       {/* Services Section */}
       <section>
         <div className="text-center mb-5">
-          <h1 className="fw-semibold">
-            <span
-              style={{
-                display: "inline-block",
-                color: "#007bff",
-                padding: "0 5px"
-              }}
-            >
-              Our Core Services
-            </span>{" "}
+          <h1 className="fw-semibold mb-3">
+            Professional Drainage & Plumbing Services in Nairobi, Kenya
           </h1>
+          <p className="lead text-muted">
+            Expert water solutions for homes, businesses, and communities across Kenya.
+            Emergency plumbing services available 24/7.
+          </p>
         </div>
 
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -127,34 +125,89 @@ export default function Home() {
 
             return (
               <div className="col" key={index}>
-                <div
-                  className="card h-100 shadow-sm border-0"
-                  style={{
-                    transition: "transform 0.3s, box-shadow 0.3s",
-                    cursor: "pointer",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "scale(1.03)";
-                    e.currentTarget.style.boxShadow = "0 0.5rem 1rem rgba(0,0,0,0.15)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "scale(1)";
-                    e.currentTarget.style.boxShadow = "0 .125rem .25rem rgba(0,0,0,.075)";
-                  }}
-                >
-                  <AdvancedImage
-                    cldImg={cldImage}
-                    className="card-img-top"
-                    style={{ height: "200px", objectFit: "cover" }}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title fw-bold">{service.title}</h5>
-                    <p className="card-text">{service.desc}</p>
+                <a href={service.link} className="text-decoration-none">
+                  <div
+                    className="card h-100 shadow-sm border-0"
+                    style={{
+                      transition: "transform 0.3s, box-shadow 0.3s",
+                      cursor: "pointer",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "scale(1.03)";
+                      e.currentTarget.style.boxShadow = "0 0.5rem 1rem rgba(0,0,0,0.15)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "scale(1)";
+                      e.currentTarget.style.boxShadow = "0 .125rem .25rem rgba(0,0,0,.075)";
+                    }}
+                  >
+                    <AdvancedImage
+                      cldImg={cldImage}
+                      className="card-img-top"
+                      style={{ height: "200px", objectFit: "cover" }}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title fw-bold">{service.title}</h5>
+                      <p className="card-text">{service.desc}</p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* Emergency Contact Section */}
+      <section className="mt-5 py-4 bg-light rounded">
+        <div className="row align-items-center">
+          <div className="col-md-8">
+            <h2 className="h4 mb-2">Need Emergency Plumbing Services in Nairobi?</h2>
+            <p className="mb-0 text-muted">
+              Blocked drains, burst pipes, or water leaks? Our expert plumbers are available 24/7 across Nairobi and surrounding areas.
+            </p>
+          </div>
+          <div className="col-md-4 text-md-end">
+            <a href="tel:+254702263360" className="btn btn-danger btn-lg">
+              <i className="bi bi-telephone me-2"></i>
+              Call Now: +254 702 263 360
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas Section */}
+      <section className="mt-5">
+        <h2 className="h4 mb-3">We Serve All Areas in Nairobi and Kenya</h2>
+        <div className="row">
+          <div className="col-md-3">
+            <h6>Nairobi Central</h6>
+            <ul className="list-unstyled small text-muted">
+              <li>CBD • Westlands • Kilimani • Karen</li>
+              <li>Runda • Lavington • Muthaiga • Kileleshwa</li>
+            </ul>
+          </div>
+          <div className="col-md-3">
+            <h6>East Nairobi</h6>
+            <ul className="list-unstyled small text-muted">
+              <li>Eastleigh • South B • South C • Embakasi</li>
+              <li>Umoja • Donholm • Pipeline • Kayole</li>
+            </ul>
+          </div>
+          <div className="col-md-3">
+            <h6>North Nairobi</h6>
+            <ul className="list-unstyled small text-muted">
+              <li>Kasarani • Ruaraka • Kahawa • Thika Road</li>
+              <li>Kiambu • Thika • Ruiru • Juja</li>
+            </ul>
+          </div>
+          <div className="col-md-3">
+            <h6>Other Counties</h6>
+            <ul className="list-unstyled small text-muted">
+              <li>Mombasa • Kisumu • Nakuru • Eldoret</li>
+              <li>Nyeri • Kirinyaga • Machakos • Kajiado</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>

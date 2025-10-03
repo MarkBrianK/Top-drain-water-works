@@ -25,16 +25,18 @@ export default function About() {
   return (
     <div className="about-page">
       <Head>
-        <title>About Us | TopDrain WaterWorks LTD</title>
+        <title>About TopDrain WaterWorks | Leading Drainage & Plumbing Company in Nairobi Kenya</title>
         <meta
           name="description"
-          content="Learn about TopDrain WaterWorks LTD — a premier water systems engineering company in Kenya specializing in drainage, plumbing, sewer, and sustainable infrastructure solutions."
+          content="Meet TopDrain WaterWorks LTD, Kenya's premier drainage and plumbing experts. 15+ years of experience in sewer systems, water tank installation, and flood control solutions across Nairobi and Kenya."
         />
         <meta
           name="keywords"
-          content="TopDrain, About, Kenya water experts, drainage, sewer systems, plumbing, infrastructure"
+          content="about TopDrain, drainage experts Kenya, plumbing company Nairobi, sewer systems Kenya, water infrastructure Nairobi, drainage contractors Kenya, plumbing services Nairobi"
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.topdrainlimited.com/about" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         {/* Open Graph */}
         <meta property="og:title" content="About Us | TopDrain WaterWorks LTD" />

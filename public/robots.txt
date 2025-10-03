@@ -1,3 +1,21 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Allow all search engines to crawl the site
+Allow: /about
+Allow: /contact
+Allow: /projects
+Allow: /info
+Allow: /careers
+Allow: /feedback
+Allow: /drain-cleaning-nairobi
+Allow: /emergency-plumbing-nairobi
+Allow: /sewer-repair-nairobi
+Allow: /water-tank-installation-kenya
+
+# Sitemap location
+Sitemap: https://www.topdrainlimited.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1

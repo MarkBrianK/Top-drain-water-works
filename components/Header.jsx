@@ -14,6 +14,16 @@ export default function Header() {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
+    {
+      name: "Services",
+      path: "/services",
+      dropdown: [
+        { name: "Drain Cleaning", path: "/drain-cleaning-nairobi" },
+        { name: "Emergency Plumbing", path: "/emergency-plumbing-nairobi" },
+        { name: "Sewer Repair", path: "/sewer-repair-nairobi" },
+        { name: "Water Tank Installation", path: "/water-tank-installation-kenya" },
+      ]
+    },
     { name: "Our Projects", path: "/projects" },
     { name: "Information Centre", path: "/info" },
     { name: "Careers", path: "/careers" },
@@ -57,17 +67,32 @@ export default function Header() {
         {/* Desktop Nav */}
         <div className="d-none d-md-flex ms-auto">
           <Nav>
-            {navItems.map(({ name, path }) => (
-              <Nav.Link
-                as={Link}
-                href={path}
-                key={name}
-                className={`fw-semibold mx-2 desktop-link ${
-                  router.pathname === path ? "active" : ""
-                }`}
-              >
-                {name}
-              </Nav.Link>
+            {navItems.map((item) => (
+              item.dropdown ? (
+                <Nav.Item key={item.name} className="mx-2">
+                  <Nav.Link className="fw-semibold desktop-link dropdown-toggle" role="button">
+                    {item.name}
+                  </Nav.Link>
+                  <div className="dropdown-menu">
+                    {item.dropdown.map((dropdownItem) => (
+                      <Link key={dropdownItem.path} href={dropdownItem.path}>
+                        <a className="dropdown-item">{dropdownItem.name}</a>
+                      </Link>
+                    ))}
+                  </div>
+                </Nav.Item>
+              ) : (
+                <Nav.Link
+                  as={Link}
+                  href={item.path}
+                  key={item.name}
+                  className={`fw-semibold mx-2 desktop-link ${
+                    router.pathname === item.path ? "active" : ""
+                  }`}
+                >
+                  {item.name}
+                </Nav.Link>
+              )
             ))}
           </Nav>
         </div>
@@ -85,18 +110,39 @@ export default function Header() {
         >
           <Offcanvas.Body className="pt-2">
             <Nav className="flex-column">
-              {navItems.map(({ name, path }) => (
-                <Nav.Link
-                  as={Link}
-                  href={path}
-                  key={name}
-                  onClick={handleClose}
-                  className={`simple-link py-2 px-3 rounded ${
-                    router.pathname === path ? "active" : ""
-                  }`}
-                >
-                  {name}
-                </Nav.Link>
+              {navItems.map((item) => (
+                item.dropdown ? (
+                  <div key={item.name}>
+                    <div className="simple-link py-2 px-3 rounded fw-bold">
+                      {item.name}
+                    </div>
+                    {item.dropdown.map((dropdownItem) => (
+                      <Nav.Link
+                        as={Link}
+                        href={dropdownItem.path}
+                        key={dropdownItem.path}
+                        onClick={handleClose}
+                        className={`simple-link py-1 px-5 rounded ${
+                          router.pathname === dropdownItem.path ? "active" : ""
+                        }`}
+                      >
+                        • {dropdownItem.name}
+                      </Nav.Link>
+                    ))}
+                  </div>
+                ) : (
+                  <Nav.Link
+                    as={Link}
+                    href={item.path}
+                    key={item.name}
+                    onClick={handleClose}
+                    className={`simple-link py-2 px-3 rounded ${
+                      router.pathname === item.path ? "active" : ""
+                    }`}
+                  >
+                    {item.name}
+                  </Nav.Link>
+                )
               ))}
             </Nav>
           </Offcanvas.Body>
@@ -159,6 +205,36 @@ export default function Header() {
 
         .navbar-toggler-icon {
           filter: brightness(0.3);
+        }
+
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          background-color: white;
+          min-width: 200px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1000;
+          border-radius: 8px;
+          padding: 8px 0;
+          margin-top: 5px;
+        }
+
+        .dropdown-toggle:hover + .dropdown-menu,
+        .dropdown-menu:hover {
+          display: block;
+        }
+
+        .dropdown-item {
+          color: #004080;
+          padding: 8px 16px;
+          text-decoration: none;
+          display: block;
+          transition: background-color 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+          background-color: #f8f9fa;
+          color: #007bff;
         }
       `}</style>
     </Navbar>

@@ -98,16 +98,18 @@ export default function Projects() {
   return (
     <div className="container py-5">
       <Head>
-        <title>Our Projects | TopDrain WaterWorks LTD</title>
+        <title>Drainage & Plumbing Projects in Nairobi Kenya | TopDrain WaterWorks Portfolio</title>
         <meta
           name="description"
-          content="Explore TopDrain WaterWorks’ completed drainage, sewer, and plumbing projects across Kenya. Visual proof of sustainable water infrastructure solutions."
+          content="View TopDrain WaterWorks' completed drainage, sewer, and plumbing projects in Nairobi, Kirinyaga, Nyeri, and Lavington. Professional water infrastructure solutions across Kenya."
         />
         <meta
           name="keywords"
-          content="TopDrain projects, plumbing Kenya, sewer systems, drainage installation, flood control, infrastructure projects Kenya"
+          content="drainage projects Nairobi, plumbing projects Kenya, sewer systems Nairobi, water tank installation projects, flood control Kenya, drainage contractors portfolio, plumbing work examples Nairobi"
         />
         <meta name="author" content="TopDrain WaterWorks LTD" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.topdrainlimited.com/projects" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Head>
       <h2 className="fw-semibold text-center mb-4">Our Projects</h2>
