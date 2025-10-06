@@ -31,6 +31,7 @@ export default function Header() {
             height="70"
             className="me-3"
             style={{ objectFit: "contain" }}
+            loading="lazy"
           />
           <div>
             <h5 className="mb-0 fw-bold brand-title">

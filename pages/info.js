@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from 'next/link'
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -67,7 +68,7 @@ export default function InformationCentre() {
             <div className="card-body">
               <h5 className="card-title">Emergency Plumbing Services</h5>
               <p className="card-text">Need urgent plumbing help in Nairobi?</p>
-              <a href="/contact" className="btn btn-primary">Contact TopDrain</a>
+              <Link href="/contact" className="btn btn-primary">Contact TopDrain</Link>
               <p className="mt-2 small">Available 24/7 for emergency repairs</p>
             </div>
           </div>

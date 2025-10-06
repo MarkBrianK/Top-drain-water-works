@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
-import servicesData from "../src/Data/services.json";
-import carouselImages from "../src/Data/carouselImages.json";
+import Link from 'next/link'
+import servicesData from "../data/services.json";
+import carouselImages from "../data/carouselImages.json";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedImage } from "@cloudinary/react";
 import { scale } from "@cloudinary/url-gen/actions/resize";
@@ -123,10 +124,10 @@ export default function Home() {
                 <i className="bi bi-telephone me-2"></i>
                 Call Now: +254 702 263 360
               </a>
-              <a href="/contact" className="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
+              <Link href="/contact" className="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
                 <i className="bi bi-envelope me-2"></i>
                 Get Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>

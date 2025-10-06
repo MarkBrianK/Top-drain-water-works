@@ -1,5 +1,7 @@
+import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import { Analytics } from '@vercel/analytics/react'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -79,8 +81,34 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Layout>
-        {shouldShowLoading ? <LoadingSpinner /> : <Component {...pageProps} />}
+        <Component {...pageProps} />
+
+        {/* Loading overlay: shown on route changes without replacing page content */}
+        {shouldShowLoading && (
+          <div className="loading-overlay" aria-hidden={!shouldShowLoading}>
+            <LoadingSpinner />
+          </div>
+        )}
       </Layout>
+
+  {/* Vercel Analytics: place once at root so it's initialized for the Next app */}
+  <Analytics />
+
+      <style jsx global>{`
+        .loading-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(255,255,255,0.6);
+          z-index: 9999;
+          backdrop-filter: blur(3px);
+        }
+      `}</style>
     </>
   )
 }

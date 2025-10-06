@@ -79,8 +79,8 @@ export default function Header() {
                   </Nav.Link>
                   <div className="dropdown-menu">
                     {item.dropdown.map((dropdownItem) => (
-                      <Link key={dropdownItem.path} href={dropdownItem.path}>
-                        <a className="dropdown-item" style={{ textDecoration: 'none' }}>{dropdownItem.name}</a>
+                      <Link key={dropdownItem.path} href={dropdownItem.path} className="dropdown-item" style={{ textDecoration: 'none' }}>
+                        {dropdownItem.name}
                       </Link>
                     ))}
                   </div>

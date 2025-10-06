@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "next/head";
+import Link from 'next/link'
 import { FaPhone, FaMapMarkerAlt, FaClock, FaCheckCircle } from "react-icons/fa";
+import styles from "../styles/servicePages.module.css";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -46,21 +48,23 @@ export default function DrainCleaningNairobi() {
       </Head>
 
       {/* Hero Section */}
-      <div className="hero-section mb-5">
+      <div className={`hero-section mb-5 ${styles.hero}`} style={{
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      }}>
         <div className="row align-items-center">
           <div className="col-lg-8">
-            <h1 className="fw-bold mb-3 display-5">Professional Drain Cleaning Services in Nairobi, Kenya</h1>
-            <p className="lead fs-4 mb-4">
+            <h1 className={`fw-bold mb-3 display-5 ${styles.heroTitle}`}>Professional Drain Cleaning Services in Nairobi, Kenya</h1>
+            <p className={`lead ${styles.heroLead} mb-4`}>
               Experiencing slow drains or complete blockages? TopDrain WaterWorks provides expert drain cleaning and unclogging services throughout Nairobi and surrounding areas.
             </p>
             <div className="d-flex gap-3 flex-wrap">
-              <a href="tel:+254702263360" className="btn btn-light btn-lg call-btn">
+              <a href="tel:+254702263360" className={`btn btn-light btn-lg ${styles.btnPill}`} aria-label="Call TopDrain">
                 <FaPhone className="me-2" />
                 Call Now: +254 702 263 360
               </a>
-              <a href="/contact" className="btn btn-outline-light btn-lg quote-btn">
+              <Link href="/contact" className={`btn btn-outline-light btn-lg ${styles.btnPill}`}>
                 Get Free Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -78,7 +82,7 @@ export default function DrainCleaningNairobi() {
               { title: "Competitive Pricing", text: "Fair, transparent pricing with no hidden costs" }
             ].map((f, i) => (
               <div className="col-md-6 mb-4" key={i}>
-                <div className="feature-card">
+                <div className={`${styles.featureCard} feature-card`}>
                   <div className="d-flex align-items-center mb-3">
                     <div className="feature-icon">
                       <FaCheckCircle className="text-white fs-5" />
@@ -121,7 +125,7 @@ export default function DrainCleaningNairobi() {
           </div>
 
           <h2>Drain Cleaning Tips for Nairobi Residents</h2>
-          <div className="card tips-card">
+          <div className={`card ${styles.featureCard} tips-card`}>
             <div className="card-body">
               <h5 className="card-title">Prevention is Better Than Cure</h5>
               <ul>
@@ -137,21 +141,21 @@ export default function DrainCleaningNairobi() {
 
         {/* Sidebar */}
         <div className="col-lg-4">
-          <div className="card cta-card sticky-top">
-            <div className="card-header text-white text-center py-3">
+          <div className={`card ${styles.ctaCard} ${styles.stickyTop}`}>
+            <div className={`card-header text-white text-center py-3 ${styles.ctaHeaderPrimary}`}>
               <h5 className="mb-0 fw-bold">Need Drain Cleaning Now?</h5>
             </div>
             <div className="card-body p-4">
               <p className="text-center text-muted mb-4">Get immediate help for blocked drains in Nairobi</p>
 
               <div className="d-grid gap-2 mb-4">
-                <a href="tel:+254702263360" className="btn btn-primary btn-lg rounded-pill shadow-sm">
+                <a href="tel:+254702263360" className={`btn btn-primary btn-lg ${styles.btnPill} shadow-sm`}>
                   <FaPhone className="me-2" />
                   Call: +254 702 263 360
                 </a>
-                <a href="/contact" className="btn btn-outline-primary btn-lg rounded-pill">
+                <Link href="/contact" className={`btn btn-outline-primary btn-lg ${styles.btnPill}`}>
                   Get Free Quote
-                </a>
+                </Link>
               </div>
 
               <div className="service-info">
@@ -174,14 +178,14 @@ export default function DrainCleaningNairobi() {
             </div>
           </div>
 
-          <div className="card mt-3 areas-card">
-            <div className="card-header text-white text-center py-3">
+          <div className={`card mt-3 ${styles.featureCard} areas-card`}>
+            <div className={`card-header text-white text-center py-3 ${styles.areasHeaderSuccess}`}>
               <h6 className="mb-0 fw-bold">Service Areas</h6>
             </div>
             <div className="card-body p-4">
               <ul className="service-areas list-unstyled mb-0">
-                {["Westlands","Lavington","Karen","Runda","Kilimani","Kileleshwa","And surrounding areas"].map((a,i)=>(
-                  <li key={i}><FaCheckCircle className="text-success me-2" />{a}</li>
+                {['Westlands','Lavington','Karen','Runda','Kilimani','Kileleshwa','And surrounding areas'].map((a,i)=>(
+                  <li key={i} className={styles.serviceAreaItem}><FaCheckCircle className="text-success me-2" />{a}</li>
                 ))}
               </ul>
             </div>

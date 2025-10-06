@@ -4,7 +4,7 @@ import { AdvancedImage } from "@cloudinary/react";
 import { auto } from "@cloudinary/url-gen/qualifiers/format";
 import { auto as qualityAuto } from "@cloudinary/url-gen/qualifiers/quality";
 import Head from "next/head";
-import data from "../src/Data/projects.json";
+import data from "../data/projects.json";
 
 const cld = new Cloudinary({
   cloud: {

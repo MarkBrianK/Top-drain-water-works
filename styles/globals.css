@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reduce excessive white space on very large screens */
+:root {
+  /* Allow a wider content area on large screens to reduce huge side gutters */
+  --site-max-width: 1300px;
+  --content-gutter: 1rem; /* used for responsive horizontal padding */
+}
+
+/* Constrain main content to a centered container with reasonable max-width */
+.site-container {
+  max-width: var(--site-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--content-gutter);
+  padding-right: var(--content-gutter);
+}
+
+/* Improve large-viewport spacing: reduce big vertical gaps */
+main > * {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Global typography and improved readable defaults */
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #1f2937;
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+
+h1,h2,h3,h4,h5 {
+  color: #0f172a;
+  line-height: 1.15;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; }
+
+/* Buttons: subtle modern style that works with Bootstrap */
+.btn-primary {
+  background-image: linear-gradient(90deg,#4f46e5,#0ea5e9);
+  border: none;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+/* Cards: slightly elevated neutral look */
+.card, .featureCard, .ctaCard {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.04);
+}
+
+/* Reduce large vertical gaps on very wide screens */
+@media (min-width: 1400px) {
+  main > * { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+  :root { --content-gutter: 2rem; }
+}
+
+/* Small helper for hero max width */
+.hero-inner { max-width: 900px; margin: 0 auto }
+
+/* Keep spinner overlay styling consistent with Tailwind utilities (use plain CSS to avoid @apply issues) */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+}

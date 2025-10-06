@@ -172,6 +172,7 @@ export default function About() {
                 padding: "5px",
                 border: "2px solid #ddd"
               }}
+              loading="lazy"
             />
             <h5 className="fw-bold mt-3">Muriithi Mwangi</h5>
             <p className="text-muted">Director of Technical Operations & Strategic Development</p>
@@ -196,6 +197,7 @@ export default function About() {
                 padding: "5px",
                 border: "2px solid #ddd"
               }}
+              loading="lazy"
             />
             <h5 className="fw-bold mt-3">Maina Ndegwa</h5>
             <p className="text-muted">Business Development Director - Water Infrastructure</p>

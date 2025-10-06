@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import Link from 'next/link'
+import styles from "../styles/servicePages.module.css";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -45,21 +47,21 @@ export default function EmergencyPlumbingNairobi() {
       <div className="hero-section mb-5 p-5 rounded-4" style={{
         background: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)',
         color: 'white',
-        boxShadow: '0 15px 35px rgba(255, 107, 107, 0.3)'
+        boxShadow: '0 15px 35px rgba(255, 107, 107, 0.3)',
       }}>
         <div className="text-center">
-          <h1 className="fw-bold mb-3 display-5">Emergency Plumbing Services in Nairobi Kenya</h1>
+          <h1 className={`fw-bold mb-3 display-5 ${styles.heroTitle}`}>Emergency Plumbing Services in Nairobi Kenya</h1>
           <p className="lead fs-4 mb-4">
             Available 24/7 for urgent plumbing emergencies across Nairobi. Fast response, professional service, competitive pricing.
           </p>
           <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="tel:+254702263360" className="btn btn-light btn-lg px-5 py-3 rounded-pill shadow-lg">
+            <a href="tel:+254702263360" className={`btn btn-light btn-lg px-5 py-3 ${styles.btnPill} shadow-lg`} aria-label="Emergency call">
               <i className="bi bi-telephone me-2"></i>
               Emergency Call: +254 702 263 360
             </a>
-            <a href="/contact" className="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
-              Get Quote
-            </a>
+              <Link href="/contact" className={`btn btn-outline-light btn-lg px-4 py-3 ${styles.btnPill}`}>
+                Get Quote
+              </Link>
           </div>
         </div>
       </div>
@@ -70,7 +72,7 @@ export default function EmergencyPlumbingNairobi() {
 
           <div className="row mb-5">
             <div className="col-md-6 mb-4">
-              <div className="emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
+              <div className={`${styles.featureCard} emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0`} style={{
                 background: 'linear-gradient(145deg, #fff5f5 0%, #fef2f2 100%)',
                 border: '2px solid #fecaca'
               }}>
@@ -97,7 +99,7 @@ export default function EmergencyPlumbingNairobi() {
               </div>
             </div>
             <div className="col-md-6 mb-4">
-              <div className="emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
+              <div className={`${styles.featureCard} emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0`} style={{
                 background: 'linear-gradient(145deg, #f0f9ff 0%, #e0f2fe 100%)',
                 border: '2px solid #bae6fd'
               }}>
@@ -124,7 +126,7 @@ export default function EmergencyPlumbingNairobi() {
               </div>
             </div>
             <div className="col-md-6 mb-4">
-              <div className="emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
+              <div className={`${styles.featureCard} emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0`} style={{
                 background: 'linear-gradient(145deg, #fff7ed 0%, #fed7aa 100%)',
                 border: '2px solid #fed7aa'
               }}>
@@ -151,7 +153,7 @@ export default function EmergencyPlumbingNairobi() {
               </div>
             </div>
             <div className="col-md-6 mb-4">
-              <div className="emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
+              <div className={`${styles.featureCard} emergency-service-card p-4 h-100 rounded-3 shadow-sm border-0`} style={{
                 background: 'linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%)',
                 border: '2px solid #bbf7d0'
               }}>
@@ -261,7 +263,7 @@ export default function EmergencyPlumbingNairobi() {
                 <li>Water heater servicing</li>
                 <li>Leak detection</li>
               </ul>
-              <a href="/contact" className="btn btn-outline-primary">Schedule Maintenance</a>
+              <Link href="/contact" className="btn btn-outline-primary">Schedule Maintenance</Link>
             </div>
           </div>
 
@@ -287,7 +289,7 @@ export default function EmergencyPlumbingNairobi() {
         </p>
         <div className="text-center">
           <a href="tel:+254702263360" className="btn btn-danger btn-lg me-3">Emergency Call: +254 702 263 360</a>
-          <a href="/contact" className="btn btn-outline-primary btn-lg">Contact Us</a>
+      <Link href="/contact" className="btn btn-outline-primary btn-lg">Contact Us</Link>
         </div>
       </div>
     </div>

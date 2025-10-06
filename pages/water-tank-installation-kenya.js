@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { FaPhoneAlt, FaMapMarkerAlt, FaClock, FaTools, FaShieldAlt, FaCheckCircle } from "react-icons/fa";
+import styles from "../styles/servicePages.module.css";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -73,9 +74,9 @@ export default function WaterTankInstallationKenya() {
 
       <div className="row">
         <div className="col-lg-8">
-          <h1 className="fw-bold mb-4">Professional Water Tank Installation Services in Kenya</h1>
+          <h1 className={`fw-bold mb-4 ${styles.heroTitle}`}>Professional Water Tank Installation Services in Kenya</h1>
 
-          <p className="lead mb-4">
+          <p className={`lead mb-4 ${styles.heroLead}`}>
             Need reliable water storage solutions? TopDrain WaterWorks LTD provides expert water tank installation services across Kenya, including Nairobi, Mombasa, Kisumu, and surrounding areas.
           </p>
 
@@ -87,7 +88,7 @@ export default function WaterTankInstallationKenya() {
           <h2>Types of Water Tanks We Install</h2>
           <div className="row mb-4">
             <div className="col-md-6">
-              <div className="card h-100 mb-3">
+              <div className={`card h-100 mb-3 ${styles.featureCard}`}>
                 <div className="card-body">
                   <h5 className="card-title">Overhead Tanks</h5>
                   <p className="card-text">Elevated water storage tanks for gravity-fed water systems. Perfect for residential and commercial buildings.</p>
@@ -100,7 +101,7 @@ export default function WaterTankInstallationKenya() {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="card h-100 mb-3">
+              <div className={`card h-100 mb-3 ${styles.featureCard}`}>
                 <div className="card-body">
                   <h5 className="card-title">Underground Tanks</h5>
                   <p className="card-text">Below-ground water storage tanks for space-saving and aesthetic purposes. Ideal for large capacity storage.</p>
@@ -117,7 +118,7 @@ export default function WaterTankInstallationKenya() {
           <h2>Our Water Tank Installation Process</h2>
           <div className="row mb-4">
             <div className="col-md-3 mb-3">
-              <div className="card h-100">
+              <div className={`card h-100 ${styles.featureCard}`}>
                 <div className="card-body text-center">
                   <div className="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '60px', height: '60px'}}>
                     <strong>1</strong>
@@ -258,9 +259,9 @@ export default function WaterTankInstallationKenya() {
           </ul>
         </div>
 
-        <div className="col-lg-4">
-          <div className="card sticky-top" style={{top: '20px'}}>
-            <div className="card-header bg-primary text-white">
+            <div className="col-lg-4">
+          <div className={`card ${styles.ctaCard} ${styles.stickyTop}`}>
+            <div className={`card-header text-white ${styles.ctaHeaderPrimary}`}>
               <h5 className="mb-0">Get Water Tank Quote</h5>
             </div>
             <div className="card-body">
@@ -273,13 +274,13 @@ export default function WaterTankInstallationKenya() {
                 <li className="mb-2">✓ Warranty and maintenance</li>
               </ul>
               <div className="d-grid gap-2">
-                <a href="tel:+254702263360" className="btn btn-primary">
+                <a href="tel:+254702263360" className={`btn btn-primary ${styles.btnPill}`}>
                   <FaPhoneAlt className="me-2" />
                   Call: +254 702 263 360
                 </a>
-                <a href="/contact" className="btn btn-outline-primary">
+                <Link href="/contact" className={`btn btn-outline-primary ${styles.btnPill}`}>
                   Request Quote
-                </a>
+                </Link>
               </div>
               <hr/>
               <div className="text-center">

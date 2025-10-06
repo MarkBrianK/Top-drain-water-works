@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { FaPhoneAlt, FaMapMarkerAlt, FaClock, FaTools, FaShieldAlt } from "react-icons/fa";
+import styles from "../styles/servicePages.module.css";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -79,7 +80,7 @@ export default function SewerRepairNairobi() {
             Experiencing sewer problems in Nairobi? TopDrain WaterWorks LTD provides expert sewer repair, maintenance, and emergency services across Kenya's capital city and surrounding areas.
           </p>
 
-          <div className="alert alert-warning mb-4">
+          <div className={`alert alert-warning mb-4 ${styles.featureCard}`}>
             <FaShieldAlt className="me-2" />
             <strong>Emergency Sewer Repair Available 24/7</strong> - Call +254 702 263 360 for immediate assistance
           </div>
@@ -107,7 +108,7 @@ export default function SewerRepairNairobi() {
           <h2>Our Sewer Repair Process</h2>
           <div className="row mb-4">
             <div className="col-md-4 mb-3">
-              <div className="card h-100">
+              <div className={`card h-100 ${styles.featureCard}`}>
                 <div className="card-body text-center">
                   <div className="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '60px', height: '60px'}}>
                     <strong>1</strong>
@@ -118,7 +119,7 @@ export default function SewerRepairNairobi() {
               </div>
             </div>
             <div className="col-md-4 mb-3">
-              <div className="card h-100">
+              <div className={`card h-100 ${styles.featureCard}`}>
                 <div className="card-body text-center">
                   <div className="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '60px', height: '60px'}}>
                     <strong>2</strong>
@@ -129,7 +130,7 @@ export default function SewerRepairNairobi() {
               </div>
             </div>
             <div className="col-md-4 mb-3">
-              <div className="card h-100">
+              <div className={`card h-100 ${styles.featureCard}`}>
                 <div className="card-body text-center">
                   <div className="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style={{width: '60px', height: '60px'}}>
                     <strong>3</strong>
@@ -143,30 +144,30 @@ export default function SewerRepairNairobi() {
 
           <h2>Why Choose TopDrain for Sewer Repair in Nairobi?</h2>
           <ul className="list-group mb-4">
-            <li className="list-group-item d-flex align-items-center">
-              <FaShieldAlt className="text-success me-3" />
-              <div>
-                <strong>Licensed & Insured:</strong> Fully licensed professionals with comprehensive insurance coverage
-              </div>
-            </li>
-            <li className="list-group-item d-flex align-items-center">
-              <FaClock className="text-success me-3" />
-              <div>
-                <strong>24/7 Emergency Service:</strong> Available around the clock for urgent sewer problems
-              </div>
-            </li>
-            <li className="list-group-item d-flex align-items-center">
-              <FaTools className="text-success me-3" />
-              <div>
-                <strong>Advanced Equipment:</strong> Latest technology for accurate diagnosis and efficient repairs
-              </div>
-            </li>
-            <li className="list-group-item d-flex align-items-center">
-              <FaMapMarkerAlt className="text-success me-3" />
-              <div>
-                <strong>Local Expertise:</strong> Deep knowledge of Nairobi's sewer systems and common issues
-              </div>
-            </li>
+            {[{
+              icon: <FaShieldAlt className="text-success me-3" />,
+              title: 'Licensed & Insured',
+              text: 'Fully licensed professionals with comprehensive insurance coverage'
+            },{
+              icon: <FaClock className="text-success me-3" />,
+              title: '24/7 Emergency Service',
+              text: 'Available around the clock for urgent sewer problems'
+            },{
+              icon: <FaTools className="text-success me-3" />,
+              title: 'Advanced Equipment',
+              text: 'Latest technology for accurate diagnosis and efficient repairs'
+            },{
+              icon: <FaMapMarkerAlt className="text-success me-3" />,
+              title: 'Local Expertise',
+              text: "Deep knowledge of Nairobi's sewer systems and common issues"
+            }].map((item,i)=>(
+              <li key={i} className="list-group-item d-flex align-items-center">
+                {item.icon}
+                <div>
+                  <strong>{item.title}:</strong> {item.text}
+                </div>
+              </li>
+            ))}
           </ul>
 
           <h2>Emergency Sewer Repair in Nairobi</h2>
@@ -188,7 +189,7 @@ export default function SewerRepairNairobi() {
         </div>
 
         <div className="col-lg-4">
-          <div className="card sticky-top" style={{top: '20px'}}>
+          <div className={`card ${styles.ctaCard} ${styles.stickyTop}`}>
             <div className="card-header bg-primary text-white">
               <h5 className="mb-0">Get Sewer Repair Quote</h5>
             </div>
@@ -202,13 +203,13 @@ export default function SewerRepairNairobi() {
                 <li className="mb-2">✓ Quality materials and workmanship</li>
               </ul>
               <div className="d-grid gap-2">
-                <a href="tel:+254702263360" className="btn btn-primary">
+                <a href="tel:+254702263360" className={`btn btn-primary ${styles.btnPill}`}>
                   <FaPhoneAlt className="me-2" />
                   Call Now: +254 702 263 360
                 </a>
-                <a href="/contact" className="btn btn-outline-primary">
+                <Link href="/contact" className={`btn btn-outline-primary ${styles.btnPill}`}>
                   Request Quote
-                </a>
+                </Link>
               </div>
               <hr/>
               <div className="text-center">
