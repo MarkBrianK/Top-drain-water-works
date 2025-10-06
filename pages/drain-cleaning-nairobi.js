@@ -46,11 +46,7 @@ export default function DrainCleaningNairobi() {
       </Head>
 
       {/* Hero Section */}
-      <div className="hero-section mb-5 p-5 rounded-4" style={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white',
-        boxShadow: '0 15px 35px rgba(102, 126, 234, 0.3)'
-      }}>
+      <div className="hero-section mb-5">
         <div className="row align-items-center">
           <div className="col-lg-8">
             <h1 className="fw-bold mb-3 display-5">Professional Drain Cleaning Services in Nairobi, Kenya</h1>
@@ -58,11 +54,11 @@ export default function DrainCleaningNairobi() {
               Experiencing slow drains or complete blockages? TopDrain WaterWorks provides expert drain cleaning and unclogging services throughout Nairobi and surrounding areas.
             </p>
             <div className="d-flex gap-3 flex-wrap">
-              <a href="tel:+254702263360" className="btn btn-light btn-lg px-4 py-3 rounded-pill shadow-sm">
+              <a href="tel:+254702263360" className="btn btn-light btn-lg call-btn">
                 <FaPhone className="me-2" />
                 Call Now: +254 702 263 360
               </a>
-              <a href="/contact" className="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
+              <a href="/contact" className="btn btn-outline-light btn-lg quote-btn">
                 Get Free Quote
               </a>
             </div>
@@ -75,94 +71,24 @@ export default function DrainCleaningNairobi() {
 
           <h2 className="fw-bold mb-4 text-primary">Why Choose TopDrain for Drain Cleaning in Nairobi?</h2>
           <div className="row mb-5">
-            <div className="col-md-6 mb-4">
-              <div className="feature-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
-                background: 'linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%)',
-                border: '1px solid #dee2e6'
-              }}>
-                <div className="d-flex align-items-center mb-3">
-                  <div className="feature-icon me-3" style={{
-                    width: '50px',
-                    height: '50px',
-                    background: 'linear-gradient(135deg, #28a745, #20c997)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <FaCheckCircle className="text-white fs-5" />
+            {[
+              { title: "24/7 Emergency Service", text: "Available round the clock for urgent drain blockages" },
+              { title: "Advanced Equipment", text: "High-pressure water jets and professional drain snakes" },
+              { title: "Experienced Technicians", text: "15+ years of drain cleaning experience in Kenya" },
+              { title: "Competitive Pricing", text: "Fair, transparent pricing with no hidden costs" }
+            ].map((f, i) => (
+              <div className="col-md-6 mb-4" key={i}>
+                <div className="feature-card">
+                  <div className="d-flex align-items-center mb-3">
+                    <div className="feature-icon">
+                      <FaCheckCircle className="text-white fs-5" />
+                    </div>
+                    <h5 className="mb-0 fw-bold text-primary">{f.title}</h5>
                   </div>
-                  <h5 className="mb-0 fw-bold text-primary">24/7 Emergency Service</h5>
+                  <p className="text-muted mb-0">{f.text}</p>
                 </div>
-                <p className="text-muted mb-0">Available round the clock for urgent drain blockages</p>
               </div>
-            </div>
-            <div className="col-md-6 mb-4">
-              <div className="feature-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
-                background: 'linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%)',
-                border: '1px solid #dee2e6'
-              }}>
-                <div className="d-flex align-items-center mb-3">
-                  <div className="feature-icon me-3" style={{
-                    width: '50px',
-                    height: '50px',
-                    background: 'linear-gradient(135deg, #28a745, #20c997)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <FaCheckCircle className="text-white fs-5" />
-                  </div>
-                  <h5 className="mb-0 fw-bold text-primary">Advanced Equipment</h5>
-                </div>
-                <p className="text-muted mb-0">High-pressure water jets and professional drain snakes</p>
-              </div>
-            </div>
-            <div className="col-md-6 mb-4">
-              <div className="feature-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
-                background: 'linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%)',
-                border: '1px solid #dee2e6'
-              }}>
-                <div className="d-flex align-items-center mb-3">
-                  <div className="feature-icon me-3" style={{
-                    width: '50px',
-                    height: '50px',
-                    background: 'linear-gradient(135deg, #28a745, #20c997)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <FaCheckCircle className="text-white fs-5" />
-                  </div>
-                  <h5 className="mb-0 fw-bold text-primary">Experienced Technicians</h5>
-                </div>
-                <p className="text-muted mb-0">15+ years of drain cleaning experience in Kenya</p>
-              </div>
-            </div>
-            <div className="col-md-6 mb-4">
-              <div className="feature-card p-4 h-100 rounded-3 shadow-sm border-0" style={{
-                background: 'linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%)',
-                border: '1px solid #dee2e6'
-              }}>
-                <div className="d-flex align-items-center mb-3">
-                  <div className="feature-icon me-3" style={{
-                    width: '50px',
-                    height: '50px',
-                    background: 'linear-gradient(135deg, #28a745, #20c997)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <FaCheckCircle className="text-white fs-5" />
-                  </div>
-                  <h5 className="mb-0 fw-bold text-primary">Competitive Pricing</h5>
-                </div>
-                <p className="text-muted mb-0">Fair, transparent pricing with no hidden costs</p>
-              </div>
-            </div>
+            ))}
           </div>
 
           <h2>Common Drain Problems We Solve in Nairobi</h2>
@@ -195,7 +121,7 @@ export default function DrainCleaningNairobi() {
           </div>
 
           <h2>Drain Cleaning Tips for Nairobi Residents</h2>
-          <div className="card">
+          <div className="card tips-card">
             <div className="card-body">
               <h5 className="card-title">Prevention is Better Than Cure</h5>
               <ul>
@@ -209,14 +135,10 @@ export default function DrainCleaningNairobi() {
           </div>
         </div>
 
+        {/* Sidebar */}
         <div className="col-lg-4">
-          <div className="card sticky-top border-0 shadow-lg" style={{
-            background: 'linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%)',
-            borderRadius: '20px'
-          }}>
-            <div className="card-header bg-primary text-white text-center py-3" style={{
-              borderRadius: '20px 20px 0 0'
-            }}>
+          <div className="card cta-card sticky-top">
+            <div className="card-header text-white text-center py-3">
               <h5 className="mb-0 fw-bold">Need Drain Cleaning Now?</h5>
             </div>
             <div className="card-body p-4">
@@ -233,7 +155,7 @@ export default function DrainCleaningNairobi() {
               </div>
 
               <div className="service-info">
-                <div className="d-flex align-items-center mb-3 p-2 rounded" style={{background: 'rgba(13, 110, 253, 0.1)'}}>
+                <div className="info-item">
                   <FaMapMarkerAlt className="text-primary me-3" />
                   <div>
                     <strong className="text-primary">Location</strong>
@@ -241,7 +163,7 @@ export default function DrainCleaningNairobi() {
                   </div>
                 </div>
 
-                <div className="d-flex align-items-center mb-3 p-2 rounded" style={{background: 'rgba(13, 110, 253, 0.1)'}}>
+                <div className="info-item">
                   <FaClock className="text-primary me-3" />
                   <div>
                     <strong className="text-primary">Availability</strong>
@@ -252,62 +174,124 @@ export default function DrainCleaningNairobi() {
             </div>
           </div>
 
-          <div className="card mt-3 border-0 shadow-sm" style={{
-            background: 'linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%)',
-            borderRadius: '20px'
-          }}>
-            <div className="card-header bg-success text-white text-center py-3" style={{
-              borderRadius: '20px 20px 0 0'
-            }}>
+          <div className="card mt-3 areas-card">
+            <div className="card-header text-white text-center py-3">
               <h6 className="mb-0 fw-bold">Service Areas</h6>
             </div>
             <div className="card-body p-4">
-              <ul className="list-unstyled mb-0">
-                <li className="mb-2"><i className="bi bi-check-circle text-success me-2"></i>Westlands</li>
-                <li className="mb-2"><i className="bi bi-check-circle text-success me-2"></i>Lavington</li>
-                <li className="mb-2"><i className="bi bi-check-circle text-success me-2"></i>Karen</li>
-                <li className="mb-2"><i className="bi bi-check-circle text-success me-2"></i>Runda</li>
-                <li className="mb-2"><i className="bi bi-check-circle text-success me-2"></i>Kilimani</li>
-                <li className="mb-2"><i className="bi bi-check-circle text-success me-2"></i>Kileleshwa</li>
-                <li className="mb-0"><i className="bi bi-check-circle text-success me-2"></i>And surrounding areas</li>
+              <ul className="service-areas list-unstyled mb-0">
+                {["Westlands","Lavington","Karen","Runda","Kilimani","Kileleshwa","And surrounding areas"].map((a,i)=>(
+                  <li key={i}><FaCheckCircle className="text-success me-2" />{a}</li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Styles */}
       <style jsx>{`
         .hero-section {
+          border-radius: 1.5rem;
+          padding: 3rem 2rem;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
           animation: fadeInUp 1s ease-out;
+          position: relative;
+          overflow: hidden;
         }
-
+        .call-btn, .quote-btn {
+          border-radius: 50px;
+          padding: 0.9rem 2rem;
+          font-weight: 600;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .call-btn:hover, .quote-btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
         .feature-card {
+          padding: 1.5rem;
+          border-radius: 1rem;
+          background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+          border: 1px solid #dee2e6;
           transition: all 0.3s ease;
+          height: 100%;
         }
-
         .feature-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
         }
-
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        .feature-icon {
+          width: 50px;
+          height: 50px;
+          background: linear-gradient(135deg, #28a745, #20c997);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 1rem;
+          transition: transform 0.3s ease;
         }
-
-        .service-info .d-flex {
+        .feature-card:hover .feature-icon {
+          transform: rotate(15deg) scale(1.1);
+        }
+        .cta-card {
+          background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+          border-radius: 20px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+          transition: box-shadow 0.3s ease;
+        }
+        .cta-card:hover {
+          box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .cta-card .card-header {
+          background: #0d6efd;
+          border-radius: 20px 20px 0 0;
+        }
+        .areas-card {
+          border-radius: 20px;
+          background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .areas-card .card-header {
+          background: #198754;
+          border-radius: 20px 20px 0 0;
+        }
+        .service-areas li {
+          display: flex;
+          align-items: center;
+          padding: 0.4rem 0;
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+        .service-areas li:hover {
+          color: #0d6efd;
+        }
+        .info-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+          padding: 0.5rem;
+          border-radius: 8px;
+          background: rgba(13, 110, 253, 0.1);
           transition: all 0.3s ease;
         }
-
-        .service-info .d-flex:hover {
+        .info-item:hover {
           background: rgba(13, 110, 253, 0.2) !important;
           transform: translateX(5px);
+        }
+        .tips-card {
+          border-radius: 1rem;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+          .hero-section h1 { font-size: 2rem; }
+          .hero-section p { font-size: 1.1rem; }
         }
       `}</style>
     </div>
