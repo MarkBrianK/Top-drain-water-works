@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <div className="d-flex flex-column min-vh-100">
       <Header />
-      <main className="flex-grow-1">
+      <main className="flex-grow-1 page-main">
         <div className="site-container">
           {children}
         </div>

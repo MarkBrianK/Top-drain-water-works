@@ -20,9 +20,9 @@ export default function Footer() {
       className="text-white position-relative"
       style={{
         background: "linear-gradient(135deg, #4e91f9, #0049b7)",
-        paddingTop: "60px",
-        paddingBottom: "100px",
-        marginTop: "60px"
+        paddingTop: "48px",
+        paddingBottom: "48px",
+        marginTop: "48px"
       }}
     >
       <div className="container text-center text-md-start">

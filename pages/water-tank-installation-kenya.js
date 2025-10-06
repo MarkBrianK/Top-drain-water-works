@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from 'next/link'
 import { FaPhoneAlt, FaMapMarkerAlt, FaClock, FaTools, FaShieldAlt, FaCheckCircle } from "react-icons/fa";
 import styles from "../styles/servicePages.module.css";
 
